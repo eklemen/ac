@@ -6,34 +6,31 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($scope) {
     var vm = this;
 
-    vm.awesomeThings = [];
-    vm.classAnimation = '';
-    vm.creationDate = 1446245474424;
-    vm.showToastr = showToastr;
+    $scope.myInterval = 40000;
+    $scope.noWrapSlides = false;
+    var slides = $scope.slides = [
+      {
+        image: 'assets/images/vans.png'
+      },
+      {
+        image: 'assets/images/units.png'
+      },
+      {
+        image: 'assets/images/people.png'
+      }
+    ];
 
-    activate();
+    // vm.awesomeThings = [];
+    // vm.classAnimation = '';
+    // vm.creationDate = 1446245474424;
+    // vm.showToastr = showToastr;
 
-    function activate() {
-      getWebDevTec();
-      $timeout(function() {
-        vm.classAnimation = 'rubberBand';
-      }, 4000);
-    }
-
-    function showToastr() {
-      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
-    }
-
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
-
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
-      });
-    }
+    // function showToastr() {
+    //   toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
+    //   vm.classAnimation = '';
+    // }
   }
 })();

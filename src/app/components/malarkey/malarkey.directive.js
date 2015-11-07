@@ -49,11 +49,11 @@
 
     /** @ngInject */
     function MalarkeyController($log) {
-      // var vm = this;
+      var vm = this;
 
       vm.contributors = ["people", "and more people", "things"];
 
-      // // activate();
+      // activate();
     }
 
   }

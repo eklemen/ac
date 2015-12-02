@@ -1,8 +1,8 @@
 {
   "generator-gulp-angular": {
-    "version": "0.12.1",
+    "version": "1.0.0",
     "props": {
-      "angularVersion": "~1.4.0",
+      "angularVersion": "~1.4.2",
       "angularModules": [
         {
           "key": "animate",
@@ -17,41 +17,43 @@
           "module": "ngTouch"
         },
         {
-          "key": "sanitize",
-          "module": "ngSanitize"
+          "key": "aria",
+          "module": "ngAria"
         }
       ],
       "jQuery": {
-        "key": "none"
+        "key": "jqLite"
       },
       "resource": {
-        "key": "restangular",
-        "module": "restangular"
+        "key": "angular-resource",
+        "module": "ngResource"
       },
       "router": {
-        "key": "ui-router",
-        "module": "ui.router"
+        "key": "angular-route",
+        "module": "ngRoute"
       },
       "ui": {
-        "key": "bootstrap",
-        "module": null
-      },
-      "bootstrapComponents": {
-        "key": "ui-bootstrap",
-        "module": "ui.bootstrap"
+        "key": "angular-material",
+        "module": "ngMaterial"
       },
       "cssPreprocessor": {
         "key": "node-sass",
         "extension": "scss"
       },
       "jsPreprocessor": {
-        "key": "none",
+        "key": "noJsPrepro",
         "extension": "js",
         "srcExtension": "js"
       },
       "htmlPreprocessor": {
-        "key": "none",
+        "key": "noHtmlPrepro",
         "extension": "html"
+      },
+      "bootstrapComponents": {
+        "name": null,
+        "version": null,
+        "key": null,
+        "module": null
       },
       "foundationComponents": {
         "name": null,

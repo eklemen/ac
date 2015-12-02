@@ -1,0 +1,12 @@
+@mixin cursive($size){
+	font-family: 'Rochester', cursive;
+	font-size: $size;
+}
+
+body{
+	font-family: 'Raleway', sans-serif;
+}
+.row{
+	margin-left: 0;
+	margin-right: 0;
+}

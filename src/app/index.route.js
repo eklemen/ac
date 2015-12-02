@@ -5,17 +5,16 @@
     .module('chairYg')
     .config(routeConfig);
 
-  /** @ngInject */
-  function routeConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/',
+  function routeConfig($routeProvider) {
+    $routeProvider
+      .when('/', {
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
+      })
+      .otherwise({
+        redirectTo: '/'
       });
-
-    $urlRouterProvider.otherwise('/');
   }
 
 })();

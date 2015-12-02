@@ -1,21 +1,38 @@
-<nav class="navbar navbar-static-top navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="https://github.com/Swiip/generator-gulp-angular">
-        <span class="glyphicon glyphicon-home"></span> Gulp Angular
-      </a>
-    </div>
+<md-toolbar class="nav" layout="row" layout-align="start center">
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-      <ul class="nav navbar-nav">
-        <li class="active"><a ng-href="#">Home</a></li>
-        <li><a ng-href="#">About</a></li>
-        <li><a ng-href="#">Contact</a></li>
-      </ul>
+  <md-button href="#">Chair You Go</md-button>
 
-      <ul class="nav navbar-nav navbar-right acme-navbar-text">
-        <li>Application was created {{ vm.relativeDate }}.</li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <section flex layout="row" layout-align="end center">
+    <!-- <md-button href="#" class="md-raised">Home</md-button>
+    <md-button href="#about" class="md-raised">About</md-button>
+    <md-button href="#contact" class="md-raised">Contact</md-button> -->
+    <md-fab-speed-dial md-open="true" md-direction="left" ng-class="'md-scale'">
+        <md-fab-trigger>
+          <md-button aria-label="menu" class="md-fab md-warn">
+            <md-icon class="material-icons">menu</md-icon>
+          </md-button>
+        </md-fab-trigger>
+
+        <md-fab-actions>
+          <a href="//google.com">
+            <md-button class="md-fab md-raised md-mini">
+            <md-icon class="material-icons">instagram</md-icon>
+          </md-button>
+          </a>
+          
+          <a href="//yahoo.com">
+            <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
+              <md-icon class="material-icons" aria-label="Facebook"></md-icon>
+            </md-button>
+          </a>
+          
+          <a href="//woot.com">
+            <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
+              <md-icon class="material-icons" aria-label="Google Hangout"></md-icon>
+            </md-button>
+          </a>
+        </md-fab-actions>
+    </md-fab-speed-dial>
+  </section>
+
+</md-toolbar>

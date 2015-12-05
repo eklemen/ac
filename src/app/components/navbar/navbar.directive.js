@@ -18,8 +18,11 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController() {
+    function NavbarController($mdMenu) {
       var vm = this;
+      vm.closeMenu = function(){
+        $mdMenu.hide(null, { closeAll: true });
+      }
     }
   }
 

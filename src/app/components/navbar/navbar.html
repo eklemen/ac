@@ -1,4 +1,4 @@
-<md-toolbar class="md-mainColor md-hue-2" layout="row" layout-align="start center">
+<!-- <md-toolbar class="md-mainColor md-hue-2" layout="row" layout-align="start center">
 
   <md-button href="https://github.com/Swiip/generator-gulp-angular">Company Name</md-button>
 
@@ -8,4 +8,40 @@
     <md-button href="#contact" class="md-raised">Contact</md-button>
   </section>
 
-</md-toolbar>
+</md-toolbar> -->
+
+
+<md-toolbar class="md-menu-toolbar">
+    <div layout="row">
+      <div>
+        <md-menu-bar>
+          <md-menu>
+            <button ng-mouseenter="$mdOpenMenu()">
+              File
+            </button>
+            <md-menu-content ng-mouseleave="vm.closeMenu()">
+              <md-menu-item>
+                <md-button ng-click="ctrl.sampleAction('share', $event)">
+                  Share...
+                </md-button>
+              </md-menu-item>
+              <md-menu-divider></md-menu-divider>
+              <md-menu-item>
+                <md-menu>
+                  <md-button ng-click="$mdOpenMenu()">New</md-button>
+                  <md-menu-content>
+                    <md-menu-item><md-button ng-click="ctrl.sampleAction('New Document', $event)">Document</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Spreadsheet</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Presentation</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="ctrl.sampleAction('New Form', $event)">Form</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="ctrl.sampleAction('New Drawing', $event)">Drawing</md-button></md-menu-item>
+                  </md-menu-content>
+                </md-menu>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+          
+        </md-menu-bar>
+      </div>
+    </div>
+  </md-toolbar>

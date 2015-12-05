@@ -11,15 +11,15 @@
 </md-toolbar> -->
 
 
-<md-toolbar class="md-menu-toolbar">
-    <div layout="row">
+<md-toolbar class="md-menu-toolbar" layout="row" layout-align="start center">
+    <div >
       <div>
         <md-menu-bar>
           <md-menu>
-            <button ng-mouseenter="$mdOpenMenu()">
-              File
+            <button ng-mouseenter="$mdOpenMenu() && vm.mouseIn()">
+              Services
             </button>
-            <md-menu-content ng-mouseleave="vm.closeMenu()">
+            <md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
               <md-menu-item>
                 <md-button ng-click="ctrl.sampleAction('share', $event)">
                   Share...

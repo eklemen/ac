@@ -10,11 +10,12 @@
 .main{
 	.section1{
 		clear: both;
-		height: 700px;
+		height: 500px;
 		&#about{
 			height: 450px;
 		}
 		.background{
+			@include background-image('../assets/images/vans1.png');
 			display: flex;
 			align-items: center;
 			.content{

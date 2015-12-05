@@ -17,12 +17,6 @@
 		.background{
 			display: flex;
 			align-items: center;
-			&.bg-1{
-				@include background-image('../assets/images/flower-unlit.JPG');
-			}
-			&.bg-2{
-				@include background-image('../assets/images/flower2-sm.JPG', fixed);	
-			}
 			.content{
 				p{
 					background-color: white;
@@ -47,7 +41,6 @@
 				}
 				p{
 					text-align: center;
-					@include cursive(2em);
 					margin: 0;
 					@media(max-width: 480px) {
 				    	font-size: 24px;
@@ -59,6 +52,19 @@
 				    }
 				}
 
+			}
+		}
+	}
+	.brands{
+		flex-wrap:wrap;
+		height: auto;
+		width: 100%;
+		div{
+			width: 90px;
+			margin: 0 10px;
+			img{
+				width: 100%;
+				min-width: 90px;
 			}
 		}
 	}

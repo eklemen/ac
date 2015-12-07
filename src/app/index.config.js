@@ -10,7 +10,8 @@
     var mainColorMap = $mdThemingProvider.extendPalette('green', {
       '400': '78ba3b',
       '500': '78ba3b',
-      'hue-2': '538624'
+      'hue-2': '538624',
+      'hue-3': '000'
     });
     // Register the new color palette map with the name <code>neonRed</code>
     $mdThemingProvider.definePalette('mainColor', mainColorMap);

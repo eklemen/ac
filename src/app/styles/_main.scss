@@ -60,6 +60,20 @@
 		flex-wrap:wrap;
 		height: auto;
 		width: 100%;
+		.text-block{
+			width: 100%;
+			h2{
+				text-align: center;
+			}
+			.body-text{
+				width: 70%;
+				margin: 0 auto;
+				@media(max-width: 680px){
+					width: 90%;
+				}
+			}
+		}
+		
 		div{
 			width: 90px;
 			margin: 0 10px;

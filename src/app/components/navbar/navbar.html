@@ -1,43 +1,59 @@
-<!-- <md-toolbar class="md-mainColor md-hue-2" layout="row" layout-align="start center">
+<md-toolbar class="md-mainColor md-hue-2 top-nav" layout="row" layout-align="start center">
 
-  <md-button href="https://github.com/Swiip/generator-gulp-angular">Company Name</md-button>
+  <div class="top-logo" layout="column" layout-align="start center">
+		<md-button href="#">Zenit Service</md-button>
+		<!-- <p class="sub-heading">HVAC Specialist</p> -->
+  </div>
 
-  <section flex layout="row" layout-align="end center">
-    <md-button href="#" class="md-raised">Home</md-button>
+  <section flex layout="row" layout-align="end end" layout-margin layout-margin>
+    <!-- <md-button href="#" class="md-raised">Home</md-button>
     <md-button href="#about" class="md-raised">About</md-button>
-    <md-button href="#contact" class="md-raised">Contact</md-button>
+    <md-button href="#contact" class="md-raised">Contact</md-button> -->
+    <div class="call">
+	    <md-button class="md-fab md-mini" aria-label="Call">
+			<md-icon class="material-icons md-mainColor md-hue-4">phone</md-icon>
+	    </md-button>
+	    <span hide-sm show-gt-sm>888-888-8888</span>
+    </div>
+    
   </section>
 
-</md-toolbar> -->
+</md-toolbar>
 
 
-<md-toolbar class="md-menu-toolbar" layout="row" layout-align="start center">
+<md-toolbar class="md-menu-toolbar" layout="row" layout-align="center center">
     <div >
       <div>
         <md-menu-bar>
           <md-menu>
             <button ng-mouseenter="$mdOpenMenu() && vm.mouseIn()">
-              Services
+              Home
+            </button>
+            <button ng-mouseenter="$mdOpenMenu() && vm.mouseIn()">
+              About
+            </button>
+            <button ng-mouseenter="$mdOpenMenu() && vm.mouseIn()">
+              Residential
             </button>
             <md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
               <md-menu-item>
-                <md-button ng-click="ctrl.sampleAction('share', $event)">
+                <md-button href="//google.com">
                   Share...
                 </md-button>
               </md-menu-item>
               <md-menu-divider></md-menu-divider>
-              <md-menu-item>
+              <!-- <md-menu-item>
                 <md-menu>
-                  <md-button ng-click="$mdOpenMenu()">New</md-button>
+                  <md-button ng-click="$mdOpenMenu()">Air Conditioning</md-button>
                   <md-menu-content>
-                    <md-menu-item><md-button ng-click="ctrl.sampleAction('New Document', $event)">Document</md-button></md-menu-item>
-                    <md-menu-item><md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Spreadsheet</md-button></md-menu-item>
-                    <md-menu-item><md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Presentation</md-button></md-menu-item>
-                    <md-menu-item><md-button ng-click="ctrl.sampleAction('New Form', $event)">Form</md-button></md-menu-item>
-                    <md-menu-item><md-button ng-click="ctrl.sampleAction('New Drawing', $event)">Drawing</md-button></md-menu-item>
+                    <md-menu-item><md-button>Document</md-button></md-menu-item>
+                    <md-menu-item><md-button>Spreadsheet</md-button></md-menu-item>
+                    <md-menu-item><md-button>Presentation</md-button></md-menu-item>
+                    <md-menu-item><md-button>Form</md-button></md-menu-item>
+                    <md-menu-item><md-button>Drawing</md-button></md-menu-item>
                   </md-menu-content>
                 </md-menu>
-              </md-menu-item>
+              </md-menu-item> -->
             </md-menu-content>
           </md-menu>
           

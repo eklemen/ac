@@ -1,63 +1,88 @@
 <md-toolbar class="md-mainColor md-hue-2 top-nav" layout="row" layout-align="start center">
 
-  <div class="top-logo" layout="column" layout-align="start center">
+	<div class="top-logo" layout="column" layout-align="start center">
 		<md-button href="#">Zenit Service</md-button>
 		<!-- <p class="sub-heading">HVAC Specialist</p> -->
-  </div>
+	</div>
 
-  <section flex layout="row" layout-align="end end" layout-margin layout-margin>
-    <!-- <md-button href="#" class="md-raised">Home</md-button>
-    <md-button href="#about" class="md-raised">About</md-button>
-    <md-button href="#contact" class="md-raised">Contact</md-button> -->
-    <div class="call">
-	    <md-button class="md-fab md-mini" aria-label="Call">
-			<md-icon class="material-icons md-mainColor md-hue-4">phone</md-icon>
-	    </md-button>
-	    <span hide-sm show-gt-sm>888-888-8888</span>
-    </div>
-    
-  </section>
+	<section flex layout="row" layout-align="end end" layout-margin layout-margin>
+		<!-- <md-button href="#" class="md-raised">Home</md-button>
+		<md-button href="#about" class="md-raised">About</md-button>
+		<md-button href="#contact" class="md-raised">Contact</md-button> -->
+		<div class="call" layout="row" layout-align="center center">
+			<md-button class="md-fab md-mini" aria-label="Call" href="tel:18475555555">
+			<md-icon class="material-icons md-mainColor md-hue-4 icon">phone</md-icon>
+			</md-button>
+			<md-button class="number" href="tel:18475555555" hide-sm show-gt-sm>888-888-8888</md-button>
+		</div>
+		
+	</section>
 
 </md-toolbar>
 
 
-<md-toolbar class="md-menu-toolbar" layout="row" layout-align="center center">
-    <div >
-      <div>
-        <md-menu-bar>
-          <md-menu>
-            <button ng-mouseenter="$mdOpenMenu() && vm.mouseIn()">
-              Home
-            </button>
-            <button ng-mouseenter="$mdOpenMenu() && vm.mouseIn()">
-              About
-            </button>
-            <button ng-mouseenter="$mdOpenMenu() && vm.mouseIn()">
-              Residential
-            </button>
-            <md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
-              <md-menu-item>
-                <md-button href="//google.com">
-                  Share...
-                </md-button>
-              </md-menu-item>
-              <md-menu-divider></md-menu-divider>
-              <!-- <md-menu-item>
-                <md-menu>
-                  <md-button ng-click="$mdOpenMenu()">Air Conditioning</md-button>
-                  <md-menu-content>
-                    <md-menu-item><md-button>Document</md-button></md-menu-item>
-                    <md-menu-item><md-button>Spreadsheet</md-button></md-menu-item>
-                    <md-menu-item><md-button>Presentation</md-button></md-menu-item>
-                    <md-menu-item><md-button>Form</md-button></md-menu-item>
-                    <md-menu-item><md-button>Drawing</md-button></md-menu-item>
-                  </md-menu-content>
-                </md-menu>
-              </md-menu-item> -->
-            </md-menu-content>
-          </md-menu>
-          
-        </md-menu-bar>
-      </div>
-    </div>
-  </md-toolbar>
+<md-toolbar class="md-menu-toolbar" layout="row" layout-align="start center">
+		<div >
+				<md-menu-bar>
+					<md-button class="md-raised" href="#/">
+						About
+					</md-button>
+
+					<!-- Residential -->
+					<md-menu>
+						<md-button class="md-raised" ng-mouseenter="$mdOpenMenu() && vm.mouseIn()" href="">
+							Residential
+						</md-button>
+						<md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+							<md-menu-item>
+								<md-button href="#/residential/service">
+									Service
+								</md-button>
+							</md-menu-item>
+							<md-menu-item>
+								<md-button href="#/residential/installation">
+									Installation
+								</md-button>
+							</md-menu-item>
+							<md-menu-item>
+								<md-button href="#/residential/repairs">
+									Repairs
+								</md-button>
+							</md-menu-item>
+							<md-menu-item>
+								<md-button href="#/residential/contracts">
+									Maint. Contracts
+								</md-button>
+							</md-menu-item>
+						</md-menu-content>
+					</md-menu>
+					<!-- End Residential -->
+
+					<!-- Commercial -->
+					<md-menu>
+						<md-button class="md-raised" ng-mouseenter="$mdOpenMenu() && vm.mouseIn()" href="">
+							Commercial
+						</md-button>
+						<md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+							<md-menu-item>
+								<md-button href="#/commercial/contracts">
+									Maint. Contracts
+								</md-button>
+							</md-menu-item>
+							<md-menu-item>
+								<md-button href="#/commercial/controls">
+									Controls
+								</md-button>
+							</md-menu-item>
+							<md-menu-item>
+								<md-button href="#/commercial/iaq">
+									IAQ
+								</md-button>
+							</md-menu-item>
+						</md-menu-content>
+					</md-menu>
+					<!-- End Commercial -->
+					
+				</md-menu-bar>
+		</div>
+	</md-toolbar>

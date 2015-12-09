@@ -24,13 +24,17 @@
 <md-toolbar class="md-menu-toolbar" layout="row" layout-align="start center">
 		<div >
 				<md-menu-bar>
-					<md-button class="md-raised" href="#/">
+					<md-button class="" href="#/about">
 						About
+					</md-button>
+					<md-button class="" href="#/contact">
+						Contact
 					</md-button>
 
 					<!-- Residential -->
 					<md-menu>
-						<md-button class="md-raised" ng-mouseenter="$mdOpenMenu() && vm.mouseIn()" href="">
+						<md-button class="" ng-mouseenter ng-click="$mdOpenMenu()" href="">
+						<!-- ng-mouseenter="$mdOpenMenu() && vm.mouseIn()" -->
 							Residential
 						</md-button>
 						<md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
@@ -60,7 +64,7 @@
 
 					<!-- Commercial -->
 					<md-menu>
-						<md-button class="md-raised" ng-mouseenter="$mdOpenMenu() && vm.mouseIn()" href="">
+						<md-button class="" ng-click="$mdOpenMenu()" href="">
 							Commercial
 						</md-button>
 						<md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
@@ -82,6 +86,76 @@
 						</md-menu-content>
 					</md-menu>
 					<!-- End Commercial -->
+
+					<!-- Mini Splits -->
+					<md-menu>
+						<md-button class="" ng-click="$mdOpenMenu()" href="">
+							Mini Splits
+						</md-button>
+						<md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+							<md-menu-item>
+								<md-button href="#/commercial/contracts">
+									Maint. Contracts
+								</md-button>
+							</md-menu-item>
+							<md-menu-item>
+								<md-button href="#/commercial/controls">
+									Controls
+								</md-button>
+							</md-menu-item>
+							<md-menu-item>
+								<md-button href="#/commercial/iaq">
+									IAQ
+								</md-button>
+							</md-menu-item>
+						</md-menu-content>
+					</md-menu>
+					<!-- End Mini Splits -->
+
+					<!-- Kitchen -->
+					<md-menu>
+						<md-button class="" ng-click="$mdOpenMenu()" href="">
+							Kitchen Services
+						</md-button>
+						<md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+							<md-menu-item>
+								<md-button href="#/commercial/contracts">
+									Hood Cleaning
+								</md-button>
+							</md-menu-item>
+							<md-menu-item>
+								<md-button href="#/commercial/controls">
+									Refrigeration
+								</md-button>
+							</md-menu-item>
+						</md-menu-content>
+					</md-menu>
+					<!-- Kitchen -->
+
+					<!-- Indoor Air Quality -->
+					<md-menu>
+						<md-button class="" ng-click="$mdOpenMenu()" href="">
+							Indoor Air Quality
+						</md-button>
+						<md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+							<md-menu-item>
+								<md-button href="#/commercial/contracts">
+									Air Cleaners
+								</md-button>
+							</md-menu-item>
+							<md-menu-item>
+								<md-button href="#/commercial/controls">
+									UV Lights
+								</md-button>
+							</md-menu-item>
+							<md-menu-item>
+								<md-button href="#/commercial/controls">
+									Duct Cleaning
+								</md-button>
+							</md-menu-item>
+						</md-menu-content>
+					</md-menu>
+					<!-- Kitchen -->
 					
 				</md-menu-bar>
 		</div>

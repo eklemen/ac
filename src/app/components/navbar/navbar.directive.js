@@ -22,6 +22,16 @@
       var vm = this;
       var timer;
 
+      // $scope.$watch('demo.isOpen', function(isOpen) {
+      //   if (isOpen) {
+      //     $timeout(function() {
+      //       $scope.tooltipVisible = self.isOpen;
+      //     }, 600);
+      //   } else {
+      //     $scope.tooltipVisible = self.isOpen;
+      //   }
+      // });
+
       // vm.mouseIn = function(){
       //   $timeout.cancel(timer);
       // };

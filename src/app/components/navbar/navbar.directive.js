@@ -18,7 +18,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($mdMenu, $timeout) {
+    function NavbarController($mdMenu, $timeout, $log, $mdSidenav, $mdComponentRegistry) {
       var vm = this;
       var timer;
 
@@ -31,6 +31,24 @@
       //     $scope.tooltipVisible = self.isOpen;
       //   }
       // });
+      vm.toggle = angular.noop;
+        vm.isOpen = function() { return false };
+        
+        $mdComponentRegistry
+          .when('left')
+          .then( function(sideNav){
+
+        vm.isOpen = angular.bind( sideNav, sideNav.isOpen );
+        vm.toggle = angular.bind( sideNav, sideNav.toggle );
+
+      });
+
+      vm.close = function() {
+        $mdSidenav('left').close()
+                         .then(function(){
+                            $log.debug("close LEFT is done");
+                          });
+      };
 
       vm.mouseIn = function(){
         $timeout.cancel(timer);

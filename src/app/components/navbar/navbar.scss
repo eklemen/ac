@@ -28,3 +28,19 @@
 		display: none;
 	}
 }
+
+.dropdowns{
+	@include hide-below();
+}
+.side-nav{
+	@include hide-above();
+}
+.side-content{
+	.close{
+		margin: 12px;
+	}
+	.side-links{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}

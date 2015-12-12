@@ -13,3 +13,14 @@ $primary: #78ba3b;
 	margin-left: 0;
 	margin-right: 0;
 }
+
+@mixin hide-below($size: 680px){
+	@media(max-width: $size){
+		display: none;
+	}
+}
+@mixin hide-above($size: 680px){
+	@media(min-width: $size){
+		display: none;
+	}
+}

@@ -32,15 +32,15 @@
       //   }
       // });
 
-      // vm.mouseIn = function(){
-      //   $timeout.cancel(timer);
-      // };
+      vm.mouseIn = function(){
+        $timeout.cancel(timer);
+      };
 
-      // vm.mouseOut = function(){
-      //   timer = $timeout(function () {
-      //     $mdMenu.hide(null, { closeAll: true })
-      //   }, 500);
-      // };
+      vm.mouseOut = function(){
+        timer = $timeout(function () {
+          $mdMenu.hide(null, { closeAll: true })
+        }, 500);
+      };
     }
   }
 

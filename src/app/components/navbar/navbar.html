@@ -21,8 +21,8 @@
 </md-toolbar>
 
 
-<md-toolbar class="md-menu-toolbar" layout="row" layout-align="start center">
-		<div >
+<md-toolbar class="md-menu-toolbar" layout="row" layout-align="center center">
+		<div layout="row" layout-align="center center">
 				<md-menu-bar>
 					<md-button class="" href="#/about">
 						About
@@ -33,7 +33,7 @@
 
 					<!-- Residential -->
 					<md-menu>
-						<md-button class="" ng-mouseenter ng-click="$mdOpenMenu()" href="">
+						<md-button class="" ng-click="$mdOpenMenu()" href="">
 						<!-- ng-mouseenter="$mdOpenMenu() && vm.mouseIn()" -->
 							Residential
 						</md-button>
@@ -86,6 +86,8 @@
 						</md-menu-content>
 					</md-menu>
 					<!-- End Commercial -->
+
+					<br>
 
 					<!-- Mini Splits -->
 					<md-menu>

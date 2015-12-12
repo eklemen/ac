@@ -1,5 +1,10 @@
 .contact{
+	padding: 0 5%;
 	.contact-image{
-		padding: 10px 10% 10% 10%;
+		overflow: hidden;
+		padding: 10px 10px 10px 25px;
+		img{
+			width: 100%;
+		}
 	}
 }

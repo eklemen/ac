@@ -3,10 +3,10 @@
 
   angular
     .module('ekSites')
-    .controller('ServicesController', ServicesController);
+    .controller('ResidentialController', ResidentialController);
 
   /** @ngInject */
-  function ServicesController($http, $httpParamSerializerJQLike) {
+  function ResidentialController($http, $httpParamSerializerJQLike) {
     var self = this;
 
     

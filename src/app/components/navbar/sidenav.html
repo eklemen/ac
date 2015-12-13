@@ -12,60 +12,25 @@
       <v-accordion class="vAccordion--default v-acc">
 
         <!-- add expanded attribute to open the section -->
-        <v-pane class="pane">
-          <v-pane-header class="header">
-            Pane header #1
-          </v-pane-header>
+        <v-pane class="pane" data-ng-repeat="item in vm.menuItems track by $index">
+          <md-button ng-show="!item.isList"
+                    ng-href="{{item.href}}" 
+                    data-ng-bind="item.title" 
+                    aria-label="item.title">
+            
+          </md-button>
+            <v-pane-header class="header" ng-show="item.isList" data-ng-bind="item.title">
+            </v-pane-header>
 
-          <v-pane-content class="v-content">
-            <div layout="column">
-            <md-button flex="100" class="">Pane content #1</md-button>
-            <md-button flex="100" class="">Pane content #2</md-button>
-            <md-button flex="100" class="">Pane content #3</md-button>
-            </div>
-          </v-pane-content>
-        </v-pane>
-
-        <v-pane class="pane">
-          <v-pane-header class="header">
-            Pane header #1
-          </v-pane-header>
-
-          <v-pane-content class="v-content">
-            <div layout="column">
-            <md-button flex="100" class="">Pane content #1</md-button>
-            <md-button flex="100" class="">Pane content #2</md-button>
-            <md-button flex="100" class="">Pane content #3</md-button>
-            </div>
-          </v-pane-content>
-        </v-pane>
-
-        <v-pane class="pane">
-          <v-pane-header class="header">
-            Pane header #1
-          </v-pane-header>
-
-          <v-pane-content class="v-content">
-            <div layout="column">
-            <md-button flex="100" class="">Pane content #1</md-button>
-            <md-button flex="100" class="">Pane content #2</md-button>
-            <md-button flex="100" class="">Pane content #3</md-button>
-            </div>
-          </v-pane-content>
-        </v-pane>
-
-        <v-pane class="pane">
-          <v-pane-header class="header">
-            Pane header #1
-          </v-pane-header>
-
-          <v-pane-content class="v-content">
-            <div layout="column">
-            <md-button flex="100" class="">Pane content #1</md-button>
-            <md-button flex="100" class="">Pane content #2</md-button>
-            <md-button flex="100" class="">Pane content #3</md-button>
-            </div>
-          </v-pane-content>
+            <v-pane-content class="v-content" ng-show="item.isList">
+              <div layout="column">
+              <md-button flex="100"
+                        data-ng-repeat="sub in item.subItems"
+                        data-ng-bind="sub.name"
+                        ng-href="{{sub.href}}">
+              </md-button>
+              </div>
+            </v-pane-content>
         </v-pane>
 
       </v-accordion>

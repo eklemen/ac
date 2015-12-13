@@ -18,7 +18,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($mdMenu, $timeout, $log, $mdSidenav, $mdComponentRegistry) {
+    function NavbarController($scope, $mdMenu, $timeout, $log, $mdSidenav, $mdComponentRegistry) {
       var vm = this;
       var timer;
 
@@ -50,6 +50,10 @@
           });
       };
 
+      $scope.$on('$routeChangeStart', function(next, current) { 
+        vm.close();
+      });
+
       vm.mouseIn = function(){
         $timeout.cancel(timer);
       };
@@ -60,6 +64,58 @@
         }, 500);
       };
 
+      vm.menuItems = [
+        {
+          title: "About",
+          isList: false,
+          href: "#/about"
+        },
+        {
+          title: "Contact",
+          isList: false,
+          href: "#/contact"
+        },
+        {
+          title: "Residential",
+          isList: true,
+          subItems: [
+            {
+              name: "Service",
+              href: "#/residential/service"
+            },
+            {
+              name: "Installation",
+              href: "#/residential/installation"
+            },
+            {
+              name: "Repairs",
+              href: "#/residential/repairs"
+            },
+            {
+              name: "Maint. Contracts",
+              href: "#/residential/contracts"
+            }
+          ]
+        },
+        {
+          title: "Commercial",
+          isList: true,
+          subItems: [
+            {
+              name: "Controls",
+              href: "#/commercial/controls"
+            },
+            {
+              name: "IAQ",
+              href: "#/commercial/iaq"
+            },
+            {
+              name: "Maint. Contracts",
+              href: "#/commercial/contracts"
+            }
+          ]
+        }
+      ]
     }
   }
 

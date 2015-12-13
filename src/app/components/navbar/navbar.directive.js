@@ -59,6 +59,7 @@
           $mdMenu.hide(null, { closeAll: true })
         }, 500);
       };
+
     }
   }
 

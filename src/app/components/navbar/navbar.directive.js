@@ -45,9 +45,9 @@
 
       vm.close = function() {
         $mdSidenav('left').close()
-                         .then(function(){
-                            $log.debug("close LEFT is done");
-                          });
+          .then(function(){
+            $log.debug("close LEFT is done");
+          });
       };
 
       vm.mouseIn = function(){

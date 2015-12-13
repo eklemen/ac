@@ -44,13 +44,23 @@
 			.pane{
 				.header{
 					padding: 16px 8px;
+					margin-bottom: 0;
 					&:after, &:before{
 						right: 12px;
 					}
 				}
 				.v-content{
+					div{
+						padding-bottom: 0;
+					}
 					button{
 						text-align: left;
+						margin: 0;
+						padding: 0 0 0 18px;
+						border-radius: 0;
+						&:first-child{
+							padding-top: 12px;
+						}
 					}
 				}
 			}

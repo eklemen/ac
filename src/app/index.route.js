@@ -17,6 +17,11 @@
         controller: 'ContactController',
         controllerAs: 'con'
       })
+      .when('/about', {
+        templateUrl: 'app/about/about.html',
+        controller: 'AboutController',
+        controllerAs: 'about'
+      })
       // Residential routes
       .when('/residential/service/', {
         templateUrl: 'app/residential/partials/service.html',

@@ -6,23 +6,41 @@
       <h1 class="md-toolbar-tools">Zenit Services</h1>
       <!-- <md-button ng-click="vm.close()" class="md-primary md-fab md-mini"> -->
         <md-icon ng-click="vm.close()" class="material-icons md-warn close">cancel</md-icon>
-      </md-button>
+      <!-- </md-button> -->
     </md-toolbar>
-    <md-content layout-padding="">
-      
+    <md-content class="accordion-wrapper">
+      <v-accordion class="vAccordion--default v-acc">
+
+        <!-- add expanded attribute to open the section -->
+        <v-pane class="pane">
+          <v-pane-header class="header">
+            Pane header #1
+          </v-pane-header>
+
+          <v-pane-content class="v-content">
+            <div layout="column">
+            <md-button flex="100" class="">Pane content #1</md-button>
+            <md-button flex="100" class="">Pane content #2</md-button>
+            <md-button flex="100" class="">Pane content #3</md-button>
+            </div>
+          </v-pane-content>
+        </v-pane>
+
+        <v-pane>
+          <v-pane-header>
+            Pane header #2
+          </v-pane-header>
+
+          <v-pane-content>
+            Pane content #2
+          </v-pane-content>
+        </v-pane>
+
+      </v-accordion>
+      <!-- <md-button ng-click="vm.toggle()" class="md-primary">
+        Toggle left
+        </md-button> -->
     </md-content>
 
   </md-sidenav>
-
-  <md-content flex="" layout-padding="" class="side-links">
-
-    <!-- <div layout="column" layout-fill="" layout-align="top center">
-      <div>
-        <md-button ng-click="vm.toggle()" class="md-primary">
-        Toggle left
-        </md-button>
-      </div>
-    </div> -->
-
-  </md-content>
 </section>

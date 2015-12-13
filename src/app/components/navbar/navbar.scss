@@ -39,8 +39,21 @@
 	.close{
 		margin: 12px;
 	}
-	.side-links{
-		padding-top: 0;
-		padding-bottom: 0;
+	.accordion-wrapper{
+		.v-acc{
+			.pane{
+				.header{
+					padding: 16px 8px;
+					&:after, &:before{
+						right: 12px;
+					}
+				}
+				.v-content{
+					button{
+						text-align: left;
+					}
+				}
+			}
+		}
 	}
 }

@@ -3,10 +3,10 @@
 
   angular
     .module('ekSites')
-    .controller('MainController', MainController);
+    .controller('ContactController', ContactController);
 
   /** @ngInject */
-  function MainController($http, $httpParamSerializerJQLike) {
+  function ContactController($http, $httpParamSerializerJQLike) {
     var self = this;
 
     self.message = {};

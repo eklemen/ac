@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('ac')
+    .module('ekSites')
     .directive('acmeMalarkey', acmeMalarkey);
 
   /** @ngInject */
@@ -48,12 +48,26 @@
     }
 
     /** @ngInject */
-    function MalarkeyController($log) {
-      // var vm = this;
+    function MalarkeyController($log, githubContributor) {
+      var vm = this;
 
-      vm.contributors = ["people", "and more people", "things"];
+      vm.contributors = [];
 
-      // // activate();
+      activate();
+
+      function activate() {
+        return getContributors().then(function() {
+          $log.info('Activated Contributors View');
+        });
+      }
+
+      function getContributors() {
+        return githubContributor.getContributors(10).then(function(data) {
+          vm.contributors = data;
+
+          return vm.contributors;
+        });
+      }
     }
 
   }

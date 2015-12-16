@@ -1,0 +1,149 @@
+@mixin background-image($url, $attachment:scroll){
+	background: url($url) no-repeat center center $attachment;
+	// -webkit-background-size: cover;
+	// -moz-background-size: cover;
+	// -o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+
+.main{
+	.section1{
+		clear: both;
+		height: 500px;
+		&#about{
+			height: 450px;
+		}
+		.background{
+			@include background-image('../assets/images/vans1.png');
+			display: flex;
+			align-items: center;
+			.content{
+				p{
+					background-color: white;
+					padding: 20px;
+					border-radius: 5px;
+					line-height: 22px;
+				}
+			}
+			.headding{
+				width: 100%;
+			    height: 100%;
+			    background-color: rgba(0,0,0, 0.4);
+			    color: #fff;
+				h3{
+					font-size: 4em;
+					letter-spacing: 2px;
+					margin: 0;
+					@media(max-width: 480px) {
+				    	font-size: 34px;
+					    letter-spacing: 1px;
+				    }
+				}
+				p{
+					text-align: center;
+					margin: 0;
+					@media(max-width: 480px) {
+				    	font-size: 24px;
+				    }
+					@media(min-width: 480px) {
+				    	br{
+				    		display: none
+				    	}
+				    }
+				}
+
+			}
+		}
+	}
+	.brands{
+		flex-wrap:wrap;
+		height: auto;
+		width: 100%;
+		.text-block{
+			width: 100%;
+			margin-bottom: 24px;
+			h2{
+				text-align: center;
+			}
+			.body-text{
+				width: 70%;
+				margin: 0 auto;
+				@media(max-width: 680px){
+					width: 90%;
+				}
+			}
+		}
+
+		div{
+			width: 90px;
+			margin: 0 10px;
+			img{
+				width: 100%;
+				min-width: 90px;
+			}
+			@media(max-width: 599px){
+				width: 55px;
+				margin: 0 6px;
+				img{
+					min-width: 55px;
+				}
+			}
+		}
+	}
+
+	.section2{
+		clear: both;
+		padding-top: 25px;
+		min-height: 300px;
+		display: flex;
+		align-items: center;
+		.info-container{
+			.info-item{
+			    padding: 2%;
+				text-align: center;
+				.material-icons {
+					font-size: 48px;
+				}
+				@media(max-width: 600px){
+					padding-left: 10%;
+					padding-right: 10%;
+				}
+			}
+		}
+	}
+
+	.section4{
+		min-height: 300px;
+		padding: 4%;
+		.form-container{
+			width: 50%;
+		    padding-right: 5%;
+
+			.md-block{
+				// width: 33%;
+			}
+			@media(max-width: 768px){
+				padding: 0;
+				width: 100%;
+				.md-block{
+					width: 90%;
+					margin: 0 auto;
+				}
+				button{
+					margin-left: 5%;
+				}
+			}
+		}
+		.form-image{
+			width: 50%;
+			@media(max-width: 768px){
+				display: none;
+			}
+			img{
+				margin: 0 auto;
+				display: block;
+			}
+		}
+	}
+}

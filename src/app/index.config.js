@@ -2,20 +2,22 @@
   'use strict';
 
   angular
-    .module('ac')
+    .module('ekSites')
     .config(config);
 
   /** @ngInject */
-  function config($logProvider, toastrConfig) {
-    // Enable log
-    $logProvider.debugEnabled(true);
-
-    // Set options third-party lib
-    toastrConfig.allowHtml = true;
-    toastrConfig.timeOut = 3000;
-    toastrConfig.positionClass = 'toast-top-right';
-    toastrConfig.preventDuplicates = true;
-    toastrConfig.progressBar = true;
+  function config($mdThemingProvider) {
+    var mainColorMap = $mdThemingProvider.extendPalette('green', {
+      '400': '78ba3b',
+      '500': '78ba3b',
+      'hue-2': '538624',
+      'hue-3': '000'
+    });
+    // Register the new color palette map with the name <code>neonRed</code>
+    $mdThemingProvider.definePalette('mainColor', mainColorMap);
+    // Use that theme for the primary intentions
+    $mdThemingProvider.theme('default')
+      .primaryPalette('mainColor')
   }
 
 })();

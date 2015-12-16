@@ -17,28 +17,24 @@
           "module": "ngTouch"
         },
         {
-          "key": "sanitize",
-          "module": "ngSanitize"
+          "key": "aria",
+          "module": "ngAria"
         }
       ],
       "jQuery": {
         "key": "jqLite"
       },
       "resource": {
-        "key": "restangular",
-        "module": "restangular"
+        "key": "angular-resource",
+        "module": "ngResource"
       },
       "router": {
         "key": "angular-route",
         "module": "ngRoute"
       },
       "ui": {
-        "key": "bootstrap",
-        "module": null
-      },
-      "bootstrapComponents": {
-        "key": "ui-bootstrap",
-        "module": "ui.bootstrap"
+        "key": "angular-material",
+        "module": "ngMaterial"
       },
       "cssPreprocessor": {
         "key": "node-sass",
@@ -52,6 +48,12 @@
       "htmlPreprocessor": {
         "key": "noHtmlPrepro",
         "extension": "html"
+      },
+      "bootstrapComponents": {
+        "name": null,
+        "version": null,
+        "key": null,
+        "module": null
       },
       "foundationComponents": {
         "name": null,

@@ -1,3 +1,77 @@
 .acme-navbar-text{
-  color: white;
+	color: white;
+}
+.nav{
+	background-color: rgba(255,255,255,0.8) !important;
+	position: fixed;
+	a{
+		color: black !important;
+	}
+}
+.top-nav{
+	.top-logo{
+		span{
+			font-size: 24px;
+		}
+	}
+	.call{
+		.md-fab{
+			background-color: rgba(0,0,0,0.6) !important;
+		}
+		.number{
+
+		}
+	}
+}
+@media(min-width: 965px){
+	br{
+		display: none;
+	}
+}
+
+.dropdowns{
+	@include hide-below();
+}
+.side-nav{
+	@include hide-above();
+}
+.side-content{
+	.close{
+		margin: 12px;
+	}
+	.accordion-wrapper{
+		.v-acc{
+			.pane{
+				a{
+					text-align: left;
+					margin: 0;
+					padding: 0 0 0 18px;
+					border-radius: 0;
+					width: 100%;
+					border-bottom: 2px solid #D8D8D8;
+				}
+				.header{
+					padding: 12px 8px;
+					margin-bottom: 0;
+					&:after, &:before{
+						right: 12px;
+					}
+				}
+				.v-content{
+					div{
+						padding-bottom: 0;
+					}
+					button{
+						text-align: left;
+						margin: 0;
+						padding: 0 0 0 18px;
+						border-radius: 0;
+						&:first-child{
+							padding-top: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
 }

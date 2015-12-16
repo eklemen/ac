@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('ac')
+    .module('ekSites')
     .run(runBlock);
 
   /** @ngInject */

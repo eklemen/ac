@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('ac', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ngRoute', 'ui.bootstrap', 'toastr']);
+    .module('ekSites', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngAria', 'ngResource', 'ngRoute', 'ngMaterial', 'toastr', 'vAccordion']);
 
 })();

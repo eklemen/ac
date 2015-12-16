@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('ac')
+    .module('ekSites')
     .factory('githubContributor', githubContributor);
 
   /** @ngInject */

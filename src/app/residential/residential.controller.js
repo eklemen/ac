@@ -6,7 +6,7 @@
     .controller('ResidentialController', ResidentialController);
 
   /** @ngInject */
-  function ResidentialController($http, $httpParamSerializerJQLike) {
+  function ResidentialController() {
     var self = this;
 
     

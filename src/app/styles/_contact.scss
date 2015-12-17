@@ -7,4 +7,29 @@
 			width: 100%;
 		}
 	}
+	div{
+		p{
+			padding: 0 12px;
+		}
+	}
+	form{
+		button{
+			margin-left: 0;
+			@media(max-width: 600px){
+				margin-left: 5%;
+			}
+		}
+	}
+	
+	.map-container{
+		margin-top: 50px;
+		.map{
+			width: 90%;
+			margin: 0 auto;
+		}
+		.open-map{
+			margin-left: 5%;
+			margin-bottom: 12px;
+		}
+	}
 }

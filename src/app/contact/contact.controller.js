@@ -6,8 +6,24 @@
     .controller('ContactController', ContactController);
 
   /** @ngInject */
-  function ContactController($http, $httpParamSerializerJQLike) {
+  function ContactController($http, $httpParamSerializerJQLike, NgMap) {
     var self = this;
+
+    NgMap.getMap().then(function(map) {
+      console.log(map.getCenter());
+      console.log('markers', map.markers);
+      console.log('shapes', map.shapes);
+    });
+
+    self.myNavFunc = function (){
+      // If it's an iPhone..
+      if( (navigator.platform.indexOf("iPhone") != -1) 
+          || (navigator.platform.indexOf("iPod") != -1)
+          || (navigator.platform.indexOf("iPad") != -1))
+           window.open("//maps.apple.com/?q=5360+McIntosh+Point,+Sanford,+FL/@28.7336605,-81.3018416,17z");
+      else
+           window.open("//maps.google.com/?q=5360+McIntosh+Point,+Sanford,+FL/");
+    }
 
     self.message = {};
     self.alertSuccess = function(){

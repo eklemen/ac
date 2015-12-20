@@ -20,9 +20,9 @@
       if( (navigator.platform.indexOf("iPhone") != -1) 
           || (navigator.platform.indexOf("iPod") != -1)
           || (navigator.platform.indexOf("iPad") != -1))
-           window.open("//maps.apple.com/?q=5360+McIntosh+Point,+Sanford,+FL/@28.7336605,-81.3018416,17z");
+           window.open("//maps.apple.com/?saddr=My+Location&daddr=5360+McIntosh+Point,+Sanford,+FL/@28.7336605,-81.3018416,17z");
       else
-           window.open("//maps.google.com/?q=5360+McIntosh+Point,+Sanford,+FL/");
+           window.open("//maps.google.com/?saddr=My+Location&daddr=5360+McIntosh+Point,+Sanford,+FL/");
     }
 
     self.message = {};

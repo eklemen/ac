@@ -10,8 +10,19 @@
 }
 .top-nav{
 	.top-logo{
+		height: 70px;
+		a.md-button{
+			height: 58px;
+		}
 		span{
-			font-size: 24px;
+			font-size: 18px;
+		}
+		.logo{
+			border-radius: 5px;
+			width: 20px;
+		}
+		.zs-text{
+			width: 200px;
 		}
 	}
 	.call{

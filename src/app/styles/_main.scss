@@ -15,7 +15,7 @@
 			height: 450px;
 		}
 		.background{
-			@include background-image('../assets/images/vans1.png');
+			@include background-image('../assets/images/ZS_van_1van.jpeg');
 			display: flex;
 			align-items: center;
 			.content{
@@ -51,6 +51,11 @@
 				    		display: none
 				    	}
 				    }
+				}
+				h3, p {
+					width: 100%;
+				    text-align: center;
+				    background-color: rgba(0,0,0,0.7);
 				}
 
 			}

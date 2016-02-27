@@ -1,0 +1,21 @@
+.about{
+	@include width-fix(900px);
+	padding: 20px;
+	.section1, .section2{
+		margin: 40px auto;
+		.image-container{
+			padding: 25px;
+			img{
+				width: 100%;
+			}
+		}
+		
+	}
+
+	&.installation{
+		@include width-fix(1100px);
+		img{
+			max-width: 420px;
+		}
+	}
+}

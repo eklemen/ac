@@ -9,6 +9,8 @@
 @import './styles/shared.scss';
 @import './styles/main.scss';
 @import './styles/contact.scss';
+@import './styles/about.scss';
+@import './styles/residential.scss';
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -57,6 +59,7 @@ html {
 [layout=row] {
   flex-direction: row;
 }
+
 
 
 

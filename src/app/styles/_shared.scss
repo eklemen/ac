@@ -24,3 +24,13 @@ $primary: #78ba3b;
 		display: none;
 	}
 }
+
+@mixin width-fix($width: 800px) {
+  max-width: $width;
+  margin: 0 auto;
+}
+
+.margin-auto{
+	display: block;
+	margin: 0 auto;
+}

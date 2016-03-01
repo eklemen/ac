@@ -43,6 +43,18 @@
         controller: 'ResidentialController',
         controllerAs: 'res'
       })
+
+      // Commercial routes
+      .when('/commercial/contracts/', {
+        templateUrl: 'app/residential/partials/contracts.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+      .when('/commercial/controls/', {
+        templateUrl: 'app/commercial/partials/controls.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
       .otherwise({
         redirectTo: '/'
       });

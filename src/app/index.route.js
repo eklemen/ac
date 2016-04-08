@@ -12,11 +12,13 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
+      // Contact
       .when('/contact', {
         templateUrl: 'app/contact/contact.html',
         controller: 'ContactController',
         controllerAs: 'con'
       })
+      // About
       .when('/about', {
         templateUrl: 'app/about/about.html',
         controller: 'AboutController',
@@ -44,9 +46,26 @@
       //   controllerAs: 'res'
       // })
 
-      // Commercial routes
-      .when('/commercial/generalInfo/', {
-        templateUrl: 'app/residential/partials/generalInfo.html',
+      // Commercial
+      .when('/commercial', {
+        templateUrl: 'app/commercial/partials/commercial.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+      // Maintenence Contracts
+      .when('/maintenenceContracts', {
+        templateUrl: 'app/manitContracts/maintCont.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+      // Mini Splits
+      .when('/miniSplit/general', {
+        templateUrl: 'app/manitContracts/maintCont.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+      .when('/miniSplit/products', {
+        templateUrl: 'app/manitContracts/maintCont.html',
         controller: 'ResidentialController',
         controllerAs: 'res'
       })

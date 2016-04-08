@@ -13,10 +13,6 @@
 
 	<section flex layout="row" layout-align="end end" layout-margin layout-margin>
 		<div class="call" layout="row" layout-align="center center">
-			<md-button class="number" href="tel:18475555555" hide-sm show-gt-sm>888-888-8888</md-button>
-			<md-button class="md-fab md-mini" aria-label="Call" href="tel:18475555555">
-				<md-icon class="material-icons md-mainColor md-hue-4 icon">phone</md-icon>
-			</md-button>
 			<md-button class="md-fab md-mini side-nav" ng-click="vm.toggle()" aria-label="Menu">
 	        	<md-icon class="material-icons md-mainColor md-hue-4 icon">menu</md-icon>
 	        </md-button>
@@ -65,65 +61,39 @@
 			<!-- End Residential -->
 
 
-			<!-- <md-button class="" href="#/commercial">
-				Contact
-			</md-button> -->
-			<!-- Commercial -->
-			<md-menu>
-				<md-button class="" ng-click="$mdOpenMenu()" href="">
-					Commercial
-					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
-				</md-button>
-				<md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
-					<md-menu-item>
-						<md-button href="#/commercial/contracts">
-							Maint. Contracts
-						</md-button>
-					</md-menu-item>
-					<md-menu-item>
-						<md-button href="#/commercial/controls">
-							Controls
-						</md-button>
-					</md-menu-item>
-					<md-menu-item>
-						<md-button href="#/commercial/iaq">
-							IAQ
-						</md-button>
-					</md-menu-item>
-				</md-menu-content>
-			</md-menu>
-			<!-- End Commercial -->
+			<md-button class="" href="#/commercial">
+				Commercial
+			</md-button>
+			
+			<md-button class="" href="#/maintenenceContracts">
+				Maintenence Contracts
+			</md-button>
 
 			<br>
 
 			<!-- Mini Splits -->
-			<md-menu>
+			<!-- <md-menu>
 				<md-button class="" ng-click="$mdOpenMenu()" href="">
 					Mini Splits
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
 				</md-button>
 				<md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
 					<md-menu-item>
-						<md-button href="#/commercial/contracts">
-							Maint. Contracts
+						<md-button href="#/miniSplit/general">
+							General
 						</md-button>
 					</md-menu-item>
 					<md-menu-item>
-						<md-button href="#/commercial/controls">
-							Controls
-						</md-button>
-					</md-menu-item>
-					<md-menu-item>
-						<md-button href="#/commercial/iaq">
-							IAQ
+						<md-button href="#/miniSplit/products">
+							Products
 						</md-button>
 					</md-menu-item>
 				</md-menu-content>
-			</md-menu>
+			</md-menu> -->
 			<!-- End Mini Splits -->
 
 			<!-- Kitchen -->
-			<md-menu>
+			<!-- <md-menu>
 				<md-button class="" ng-click="$mdOpenMenu()" href="">
 					Kitchen Services
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
@@ -140,11 +110,11 @@
 						</md-button>
 					</md-menu-item>
 				</md-menu-content>
-			</md-menu>
+			</md-menu> -->
 			<!-- Kitchen -->
 
 			<!-- Indoor Air Quality -->
-			<md-menu>
+			<!-- <md-menu>
 				<md-button class="" ng-click="$mdOpenMenu()" href="">
 					Indoor Air Quality
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
@@ -166,7 +136,7 @@
 						</md-button>
 					</md-menu-item>
 				</md-menu-content>
-			</md-menu>
+			</md-menu> -->
 			<!-- Kitchen -->
 			
 		</md-menu-bar>

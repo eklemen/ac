@@ -102,12 +102,30 @@
           isList: true,
           subItems: [
             {
-              name: "Controls",
-              href: "#/commercial/controls"
+              name: "Service",
+              href: "#/commercial/service"
             },
             {
-              name: "IAQ",
-              href: "#/commercial/iaq"
+              name: "Installation",
+              href: "#/commercial/installation"
+            },
+            {
+              name: "Maint. Contracts",
+              href: "#/commercial/contracts"
+            }
+          ]
+        },
+        {
+          title: "Mini Splits",
+          isList: true,
+          subItems: [
+            {
+              name: "Service",
+              href: "#/commercial/service"
+            },
+            {
+              name: "Installation",
+              href: "#/commercial/installation"
             },
             {
               name: "Maint. Contracts",

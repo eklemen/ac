@@ -40,7 +40,7 @@
 					Residential
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
 				</md-button>
-				<md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+				<md-menu-content width="4" ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
 					<md-menu-item>
 						<md-button href="#/residential/service">
 							Service
@@ -56,28 +56,55 @@
 							Repairs
 						</md-button>
 					</md-menu-item>
+					<md-menu-item>
+						<md-button href="#/residential/contracts">
+							Maintenence Contracts
+						</md-button>
+					</md-menu-item>
 				</md-menu-content>
 			</md-menu>
 			<!-- End Residential -->
 
-
-			<md-button class="" href="#/commercial">
-				Commercial
-			</md-button>
+			<!-- Commercial -->
+			<md-menu>
+				<md-button class="" ng-click="$mdOpenMenu()" href="">
+				<!-- ng-mouseenter="$mdOpenMenu() && vm.mouseIn()" -->
+					Commercial
+					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
+				</md-button>
+				<md-menu-content width="4" ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+					<md-menu-item>
+						<md-button href="#/commercial/service">
+							Service
+						</md-button>
+					</md-menu-item>
+					<md-menu-item>
+						<md-button href="#/commercial/installation">
+							Installation
+						</md-button>
+					</md-menu-item>
+					<md-menu-item>
+						<md-button href="#/commercial/contracts">
+							Maintenence Contracts
+						</md-button>
+					</md-menu-item>
+				</md-menu-content>
+			</md-menu>
+			<!-- End Commercial -->
 			
-			<md-button class="" href="#/maintenenceContracts">
+			<!-- <md-button class="" href="#/maintenenceContracts">
 				Maintenence Contracts
-			</md-button>
+			</md-button> -->
 
 			<br>
 
 			<!-- Mini Splits -->
-			<!-- <md-menu>
+			<md-menu>
 				<md-button class="" ng-click="$mdOpenMenu()" href="">
 					Mini Splits
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
 				</md-button>
-				<md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+				<md-menu-content width="4" ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
 					<md-menu-item>
 						<md-button href="#/miniSplit/general">
 							General
@@ -89,16 +116,43 @@
 						</md-button>
 					</md-menu-item>
 				</md-menu-content>
-			</md-menu> -->
+			</md-menu>
 			<!-- End Mini Splits -->
 
+			<!-- Indoor Air Quality -->
+			<md-menu>
+				<md-button class="" ng-click="$mdOpenMenu()" href="">
+					Indoor Air Quality
+					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
+				</md-button>
+				<md-menu-content width="4" ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+					<md-menu-item>
+						<md-button href="#/iaq/general">
+							Residential & Commercial
+						</md-button>
+					</md-menu-item>
+					<md-menu-item>
+						<md-button href="#/iaq/cleaning">
+							Duct cleaning
+						</md-button>
+					</md-menu-item>
+					<md-menu-item>
+						<md-button href="#/iaq/insulation">
+							Attic Insulation
+						</md-button>
+					</md-menu-item>
+				</md-menu-content>
+			</md-menu>
+			<!-- end IAQ -->
+
+			
 			<!-- Kitchen -->
 			<!-- <md-menu>
 				<md-button class="" ng-click="$mdOpenMenu()" href="">
 					Kitchen Services
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
 				</md-button>
-				<md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+				<md-menu-content width="4" ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
 					<md-menu-item>
 						<md-button href="#/commercial/contracts">
 							Hood Cleaning
@@ -107,32 +161,6 @@
 					<md-menu-item>
 						<md-button href="#/commercial/controls">
 							Refrigeration
-						</md-button>
-					</md-menu-item>
-				</md-menu-content>
-			</md-menu> -->
-			<!-- Kitchen -->
-
-			<!-- Indoor Air Quality -->
-			<!-- <md-menu>
-				<md-button class="" ng-click="$mdOpenMenu()" href="">
-					Indoor Air Quality
-					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
-				</md-button>
-				<md-menu-content ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
-					<md-menu-item>
-						<md-button href="#/commercial/contracts">
-							Air Cleaners
-						</md-button>
-					</md-menu-item>
-					<md-menu-item>
-						<md-button href="#/commercial/controls">
-							UV Lights
-						</md-button>
-					</md-menu-item>
-					<md-menu-item>
-						<md-button href="#/commercial/controls">
-							Duct Cleaning
 						</md-button>
 					</md-menu-item>
 				</md-menu-content>

@@ -40,35 +40,58 @@
         controller: 'ResidentialController',
         controllerAs: 'res'
       })
-      // .when('/residential/contracts/', {
-      //   templateUrl: 'app/residential/partials/contracts.html',
-      //   controller: 'ResidentialController',
-      //   controllerAs: 'res'
-      // })
+      .when('/residential/contracts/', {
+        templateUrl: 'app/residential/partials/contracts.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
 
       // Commercial
-      .when('/commercial', {
-        templateUrl: 'app/commercial/partials/commercial.html',
+      .when('/commercial/service/', {
+        templateUrl: 'app/commercial/partials/service.html',
         controller: 'ResidentialController',
         controllerAs: 'res'
       })
-      // Maintenence Contracts
-      .when('/maintenenceContracts', {
-        templateUrl: 'app/manitContracts/maintCont.html',
+      .when('/commercial/contracts/', {
+        templateUrl: 'app/commercial/partials/contracts.html',
         controller: 'ResidentialController',
         controllerAs: 'res'
       })
+      .when('/commercial/installation', {
+        templateUrl: 'app/commercial/partials/installation.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+
       // Mini Splits
       .when('/miniSplit/general', {
-        templateUrl: 'app/manitContracts/maintCont.html',
+        templateUrl: 'app/miniSplit/partials/general.html',
         controller: 'ResidentialController',
         controllerAs: 'res'
       })
       .when('/miniSplit/products', {
-        templateUrl: 'app/manitContracts/maintCont.html',
+        templateUrl: 'app/miniSplit/partials/products.html',
         controller: 'ResidentialController',
         controllerAs: 'res'
       })
+
+      // IAQ
+      .when('/iaq/general', {
+        templateUrl: 'app/iaq/partials/general.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+      .when('/iaq/cleaning/', {
+        templateUrl: 'app/iaq/partials/contracts.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+      .when('/iaq/installation', {
+        templateUrl: 'app/iaq/partials/installation.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+
       .otherwise({
         redirectTo: '/'
       });

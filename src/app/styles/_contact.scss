@@ -12,6 +12,15 @@
 			padding: 0 12px;
 		}
 	}
+	.contact-direct{
+		.no-decoration{
+			text-decoration: none;
+		}
+		.fa{
+			font-size: 24px;
+			color: rgba(0,0,0,0.54);
+		}
+	}
 	form{
 		.md-block{
 			.material-icons{
@@ -24,10 +33,17 @@
 				margin-left: 5%;
 			}
 		}
+		.text-area{
+			padding-left: 37px;
+			label{
+				margin-left: 36px;
+			}
+		}
 	}
 	
 	.map-container{
 		margin-top: 50px;
+		margin-bottom: 50px;
 		.map{
 			width: 90%;
 			margin: 0 auto;

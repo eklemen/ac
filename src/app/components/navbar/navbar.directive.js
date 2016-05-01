@@ -18,7 +18,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($scope, $mdMenu, $timeout, $log, $mdSidenav, $mdComponentRegistry) {
+    function NavbarController($scope, $mdMenu, $timeout, $log, $mdSidenav, $mdComponentRegistry, $location) {
       var vm = this;
       var timer;
 
@@ -31,6 +31,12 @@
       //     $scope.tooltipVisible = self.isOpen;
       //   }
       // });
+      vm.isActive = function(route){
+        var base = $location.path().split('/')[1];
+        var myPath = '/'+base;
+        return route === myPath;
+      }
+
       vm.toggle = angular.noop;
         vm.isOpen = function() { return false };
         
@@ -46,7 +52,7 @@
       vm.close = function() {
         $mdSidenav('left').close()
           .then(function(){
-            $log.debug("close LEFT is done");
+            return;
           });
       };
 
@@ -61,7 +67,7 @@
       vm.mouseOut = function(){
         timer = $timeout(function () {
           $mdMenu.hide(null, { closeAll: true })
-        }, 500);
+        }, 300);
       };
 
       vm.menuItems = [

@@ -1,45 +1,73 @@
-<md-content class="contact" layout="column" layout-gt-sm="row">
-	<h2>Contact</h2>
-
-	<div flex>
-		<p>Have a question or need to request a service? Enter your info below and we will promptly reply.</p>
-		<form ng-submit="con.sendMessage(message)" name="emailForm" flex>
+<md-content class="about">
+	<!-- <h2 flex>Contact</h2>
+	<p flex>Have a question or need to request a service? Enter your info below and we will promptly reply.</p> -->
+	<div flex layout="column">
+		
+		<!-- <div class="contact-direct" layout="column" layout-margin flex="30" flex-xs="100">
 			<div>
+				<span>Call today</span>
+				<div>
+					<md-icon class="material-icons md-mainColor icon">phone</md-icon>
+					<a class="no-decoration" href="tel:1-407-888-4545">407-888-4545</a>
+				</div>
 
-				<md-input-container class="md-icon-float md-block">
-					<label>Name</label>
-					<md-icon class="material-icons md-mainColor icon">person</md-icon>
-					<input name="name" ng-model="con.message.name" required="true">
-					<!-- <div ng-messages="con.message.name.$error">
-						<div ng-message="required">Please enter your name</div>
-					</div> -->
-				</md-input-container>
-
-				<md-input-container class="md-icon-float md-block">
-					<label>Email</label>
-					<md-icon class="material-icons md-mainColor icon">email</md-icon>
-					<input name="_replyto" ng-model="con.message.replyTo" required="true" ng-pattern="/^.+@.+\..+$/">
-					
-					<!-- <div ng-messages="con.message.name.$error" role="alert">
-	          <div ng-message-exp="['required', 'pattern']">
-	            Please enter a valid email address.
-	          </div>
-	        </div> -->
-				</md-input-container>
-
-				<md-input-container class="md-icon-float md-block">
-					<label>Message</label>
-					<md-icon class="material-icons md-mainColor icon">email</md-icon>
-					<textarea ng-model="con.message.body" name="message" columns="1" rows="3" placeholder="Enter your message here..." required="true"></textarea>
-					<!-- <div ng-messages="message.name.$error">
-						<div ng-message="required">Enter your questions or requests.</div>
-					</div> -->
-				</md-input-container>
-				<input type="text" name="_gotcha" style="display:none" />
-				<input type="hidden" name="_next" value="#" />
-				<md-button flex="50" class="md-raised md-primary" type="submit" value="Send">Send</md-button>
 			</div>
-		</form>
+			<div>
+				<span>Email Address</span>
+				<div>
+					<md-icon class="material-icons md-mainColor icon">email</md-icon>
+					zenitservice@gmail.com
+				</div>
+			</div>
+			<div>
+				<span>Find us on Facebook</span>
+				<div>
+					<i class="fa fa-facebook-square"></i>
+					<a target="_blank" href="https://www.facebook.com/" class="no-decoration">
+						<span>Zenit Service </span>
+					</a>
+				</div>
+			</div>
+		</div> -->
+		<div flex="70" flex-xs="100">
+			<form ng-submit="con.sendMessage(message)" name="emailForm">
+				<div>
+
+					<md-input-container class="md-icon-float md-block">
+						<label>Name</label>
+						<md-icon class="material-icons md-mainColor icon">person</md-icon>
+						<input name="name" ng-model="con.message.name" required="true">
+						<!-- <div ng-messages="con.message.name.$error">
+							<div ng-message="required">Please enter your name</div>
+						</div> -->
+					</md-input-container>
+
+					<md-input-container class="md-icon-float md-block">
+						<label>Email</label>
+						<md-icon class="material-icons md-mainColor icon">email</md-icon>
+						<input name="_replyto" ng-model="con.message.replyTo" required="true" ng-pattern="/^.+@.+\..+$/">
+						
+						<!-- <div ng-messages="con.message.name.$error" role="alert">
+		          <div ng-message-exp="['required', 'pattern']">
+		            Please enter a valid email address.
+		          </div>
+		        </div> -->
+					</md-input-container>
+
+					<md-input-container class="md-icon-float md-block text-area">
+						<label>Message</label>
+						<md-icon class="material-icons md-mainColor icon">edit</md-icon>
+						<textarea ng-model="con.message.body" name="message" columns="1" rows="3" placeholder="Enter your message here..." required="true"></textarea>
+						<!-- <div ng-messages="message.name.$error">
+							<div ng-message="required">Enter your questions or requests.</div>
+						</div> -->
+					</md-input-container>
+					<input type="text" name="_gotcha" style="display:none" />
+					<input type="hidden" name="_next" value="#" />
+					<md-button flex="50" class="md-raised md-primary" type="submit" value="Send">Send</md-button>
+				</div>
+			</form>
+		</div>
 			<!-- <button ng-click="con.alertError()"></button> -->
 			<!-- <div flex="50" hide-sm>
 				<div class="contact-image">
@@ -47,11 +75,11 @@
 				</div>
 			</div> -->
 	</div>
-	<div class="map-container" flex>
+	<!-- <div class="map-container" flex="100">
 		<md-button hide-gt-sm class="md-raised open-map" ng-click="con.myNavFunc()">Get Directions</md-button>
 		<md-button show-gt-md hide-xs hide-sm class="md-raised open-map" ng-click="con.myNavFunc()">Get directions</md-button>
 		<map class="map" center="28.7336605,-81.3018416">
 			<marker position="[28.7336605,-81.3018416]" />
 		</map>
-	</div>
+	</div> -->
 </md-content>

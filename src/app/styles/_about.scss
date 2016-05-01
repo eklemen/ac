@@ -1,5 +1,5 @@
 .about{
-	@include width-fix(900px);
+	@include width-fix();
 	padding: 20px;
 	.section1, .section2{
 		margin: 40px auto;

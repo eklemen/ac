@@ -1,46 +1,46 @@
-<md-toolbar class="md-mainColor md-hue-2 top-nav" layout="row" layout-align="start center">
+<md-toolbar class="md-menu-toolbar nav">
+	<div layout="row" class="inner-nav" layout-align="space-between center">
+		<div flex="none" class="top-logo">
+			<!-- <md-button href="#/"> -->
+				<a href="#/">
+				<div layout="row" layout-align="center center">
+					<img class="logo" src="assets/images/Logo5.jpg" alt="">
+					<img class="zs-text" src="assets/images/ZS-text-clipped.png" alt="">
+				</div>
+				</a>
 
-	<div class="top-logo">
-		<md-button href="#/">
-			<div layout="row" layout-align="center center">
-			<img class="logo" src="assets/images/Logo5.jpg" alt="">
-			<img class="zs-text" src="assets/images/ZS-text-clipped.png" alt="">
+			<!-- </md-button> -->
+		</div>
+		<section flex class="side-nav" flex-offset="90" layout="row" layout-align="end end" layout-margin layout-margin>
+			<div class="call" layout="row" layout-align="center center">
+				<md-button class="md-fab md-mini" data-ng-click="vm.toggle()" aria-label="Menu">
+		        	<md-icon class="material-icons md-mainColor md-hue-4 icon">menu</md-icon>
+		        </md-button>
+			</div>
+			
+		</section>
+		<md-menu-bar class="dropdowns" flex="70">
+			<div flex="100" class="home-row" layout="row" layout-align="end center" >
+				<md-button data-ng-class="{active: vm.isActive('/')}" href="#/">
+					Home
+				</md-button>
+				<md-button data-ng-class="{active: vm.isActive('/about')}" href="#/about">
+					About
+				</md-button>
+				<md-button data-ng-class="{active: vm.isActive('/contact')}" href="#/contact">
+					Contact
+				</md-button>
 			</div>
 
-		</md-button>
-		<!-- <p class="sub-heading">HVAC Specialist</p> -->
-	</div>
-
-	<section flex layout="row" layout-align="end end" layout-margin layout-margin>
-		<div class="call" layout="row" layout-align="center center">
-			<md-button class="md-fab md-mini side-nav" ng-click="vm.toggle()" aria-label="Menu">
-	        	<md-icon class="material-icons md-mainColor md-hue-4 icon">menu</md-icon>
-	        </md-button>
-		</div>
-		
-	</section>
-
-</md-toolbar>
-
-
-<md-toolbar class="md-menu-toolbar dropdowns" layout="row" layout-align="center center">
-	<div layout="row" layout-align="center center">
-		<md-menu-bar>
-			<md-button class="" href="#/about">
-				About
-			</md-button>
-			<md-button class="" href="#/contact">
-				Contact
-			</md-button>
-
 			<!-- Residential -->
+			<div flex="100" layout="row" layout-align="end center" class="second-row">
 			<md-menu>
-				<md-button class="" ng-click="$mdOpenMenu()" href="">
-				<!-- ng-mouseenter="$mdOpenMenu() && vm.mouseIn()" -->
+				<md-button data-ng-class="{active: vm.isActive('/residential')}" ng-click="$mdOpenMenu()" href="">
+				<!-- data-ng-mouseenter="$mdOpenMenu() && vm.mouseIn()" -->
 					Residential
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
 				</md-button>
-				<md-menu-content width="4" ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+				<md-menu-content width="4" data-ng-mouseleave="vm.mouseOut()" data-ng-mouseenter="vm.mouseIn()">
 					<md-menu-item>
 						<md-button href="#/residential/service">
 							Service
@@ -67,12 +67,12 @@
 
 			<!-- Commercial -->
 			<md-menu>
-				<md-button class="" ng-click="$mdOpenMenu()" href="">
-				<!-- ng-mouseenter="$mdOpenMenu() && vm.mouseIn()" -->
+				<md-button data-ng-class="{active: vm.isActive('/commercial')}" ng-click="$mdOpenMenu()" href="">
+				<!-- data-ng-mouseenter="$mdOpenMenu() && vm.mouseIn()" -->
 					Commercial
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
 				</md-button>
-				<md-menu-content width="4" ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+				<md-menu-content width="4" data-ng-mouseleave="vm.mouseOut()" data-ng-mouseenter="vm.mouseIn()">
 					<md-menu-item>
 						<md-button href="#/commercial/service">
 							Service
@@ -92,19 +92,19 @@
 			</md-menu>
 			<!-- End Commercial -->
 			
-			<!-- <md-button class="" href="#/maintenenceContracts">
+			<!-- <md-button data-ng-class="{active: vm.isActive('')}" href="#/maintenenceContracts">
 				Maintenence Contracts
 			</md-button> -->
 
-			<br>
+			
 
 			<!-- Mini Splits -->
 			<md-menu>
-				<md-button class="" ng-click="$mdOpenMenu()" href="">
+				<md-button data-ng-class="{active: vm.isActive('/miniSplit')}" ng-click="$mdOpenMenu()" href="">
 					Mini Splits
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
 				</md-button>
-				<md-menu-content width="4" ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+				<md-menu-content width="4" data-ng-mouseleave="vm.mouseOut()" data-ng-mouseenter="vm.mouseIn()">
 					<md-menu-item>
 						<md-button href="#/miniSplit/general">
 							General
@@ -121,11 +121,11 @@
 
 			<!-- Indoor Air Quality -->
 			<md-menu>
-				<md-button class="" ng-click="$mdOpenMenu()" href="">
+				<md-button data-ng-class="{active: vm.isActive('/iaq')}" ng-click="$mdOpenMenu()" href="">
 					Indoor Air Quality
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
 				</md-button>
-				<md-menu-content width="4" ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+				<md-menu-content width="4" data-ng-mouseleave="vm.mouseOut()" data-ng-mouseenter="vm.mouseIn()">
 					<md-menu-item>
 						<md-button href="#/iaq/general">
 							Residential & Commercial
@@ -148,11 +148,11 @@
 			
 			<!-- Kitchen -->
 			<!-- <md-menu>
-				<md-button class="" ng-click="$mdOpenMenu()" href="">
+				<md-button data-ng-class="{active: vm.isActive('')}" ng-click="$mdOpenMenu()" href="">
 					Kitchen Services
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
 				</md-button>
-				<md-menu-content width="4" ng-mouseleave="vm.mouseOut()" ng-mouseenter="vm.mouseIn()">
+				<md-menu-content width="4" data-ng-mouseleave="vm.mouseOut()" data-ng-mouseenter="vm.mouseIn()">
 					<md-menu-item>
 						<md-button href="#/commercial/contracts">
 							Hood Cleaning
@@ -166,7 +166,7 @@
 				</md-menu-content>
 			</md-menu> -->
 			<!-- Kitchen -->
-			
+			</div>
 		</md-menu-bar>
 	</div>
 </md-toolbar>

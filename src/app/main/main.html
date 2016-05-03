@@ -1,4 +1,4 @@
-<div class="main" layout="vertical" layout-fill>
+<div class="main" layout="column" layout-fill>
 
   <md-content flex="100">
 
@@ -52,6 +52,43 @@
           Splendid Toastr</button>
       </p>
     -->
+    <div class="section3" layout="row" layout-align="center center">
+      <div flex="33"></div>
+      <div flex="33"></div>
+      <div flex="33"></div>
+    </div>
+
+    <div class="contact-form">
+      <h3>Contact us today!</h3>
+      <form ng-submit="main.sendMessage(message)" name="emailForm">
+        <div>
+
+          <md-input-container class="md-icon-float md-block">
+            <label>Name</label>
+            <md-icon class="material-icons md-mainColor icon">person</md-icon>
+            <input name="name" ng-model="main.message.name" required="true">
+            <div ng-messages="main.message.name.$error">
+              <div ng-message="required">Please enter your name</div>
+            </div>
+          </md-input-container>
+
+          <md-input-container class="md-icon-float md-block">
+            <label>Email</label>
+            <md-icon class="material-icons md-mainColor icon">email</md-icon>
+            <input name="_replyto" ng-model="main.message.replyTo" required="true" ng-pattern="/^.+@.+\..+$/">
+          </md-input-container>
+
+          <md-input-container class="md-icon-float md-block text-area">
+            <label>Message</label>
+            <md-icon class="material-icons md-mainColor icon">edit</md-icon>
+            <textarea ng-model="main.message.body" name="message" columns="1" rows="3" placeholder="Enter your message here..." required="true"></textarea>
+          </md-input-container>
+          <input type="text" name="_gotcha" style="display:none" />
+          <input type="hidden" name="_next" value="#" />
+          <md-button flex="50" class="md-raised md-primary" type="submit" value="Send">Send</md-button>
+        </div>
+      </form>
+    </div>
   </md-content>
 
 </div> <!-- .main -->

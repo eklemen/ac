@@ -44,7 +44,7 @@
 }
 
 .dropdowns{
-	@include hide-below(1000px);
+	@include hide-below(900px);
 	padding-left: 0;
 
 	a{
@@ -79,10 +79,18 @@
 		line-height: 28px;
 		min-width: 75px;
 		a{
-			@media(max-width: 1100px){
+			margin: 0 2px;
+			@media(max-width: 1000px){
 				.material-icons{
 					font-size: 20px;
 					width: 10px;
+					margin-left: -7px;
+				}
+			}
+			span{
+				font-size: 13px;
+				@media(max-width: 1000px){
+					font-size: 12px;
 				}
 			}
 		}
@@ -92,7 +100,7 @@
 	}
 }
 .side-nav{
-	@include hide-above(1000px);
+	@include hide-above(901px);
 }
 .side-content{
 	.close{

@@ -130,6 +130,30 @@
 			}
 		}
 	}
+	.contact-form{
+		form{
+			margin: 0 auto;
+			max-width: 750px;
+			width: 100%;
+			.md-block{
+				.material-icons{
+					display: inline-block;
+				}
+			}
+			button{
+				margin-left: 0;
+				@media(max-width: 600px){
+					margin-left: 5%;
+				}
+			}
+			.text-area{
+				padding-left: 37px;
+				label{
+					margin-left: 36px;
+				}
+			}
+		}
+	}
 
 	.section4{
 		min-height: 300px;

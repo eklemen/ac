@@ -72,6 +72,11 @@
 
       vm.menuItems = [
         {
+          title: "Home",
+          isList: false,
+          href: "#/"
+        },
+        {
           title: "About",
           isList: false,
           href: "#/about"
@@ -126,16 +131,22 @@
           isList: true,
           subItems: [
             {
-              name: "Service",
-              href: "#/commercial/service"
+              name: "General",
+              href: "#/miniSplit/general"
             },
             {
-              name: "Installation",
-              href: "#/commercial/installation"
-            },
+              name: "Products",
+              href: "#/miniSplit/products"
+            }
+          ]
+        },
+        {
+          title: "Kitchen",
+          isList: true,
+          subItems: [
             {
-              name: "Maint. Contracts",
-              href: "#/commercial/contracts"
+              name: "Refrigeration",
+              href: "#/kitchen/refrigeration"
             }
           ]
         }

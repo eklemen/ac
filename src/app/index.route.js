@@ -82,7 +82,7 @@
         controllerAs: 'res'
       })
       .when('/iaq/cleaning/', {
-        templateUrl: 'app/iaq/partials/contracts.html',
+        templateUrl: 'app/iaq/partials/cleaning.html',
         controller: 'ResidentialController',
         controllerAs: 'res'
       })

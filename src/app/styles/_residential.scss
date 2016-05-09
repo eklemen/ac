@@ -1,1 +1,87 @@
 // residential
+.residential{
+	&.installation{
+		.section0{
+			.image-container{
+				padding: 0;
+				margin: 0 -20px;
+				img{
+					width: 100%;
+					margin-left: -20px;
+				}
+				@media(max-width: 768px){
+					margin: 0 -25px;
+					img{
+						margin-left: -25px;
+					}
+				}
+			}
+			.content-box{
+				z-index: 2;
+			}
+		}
+		.section1{
+			.background{
+					@include background-image('../assets/images/site-photos/TBD2.jpg', scroll, 0.6);
+					display: flex;
+					align-items: center;
+					// background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+					.content{
+						p{
+							background-color: white;
+							padding: 20px;
+							border-radius: 5px;
+							line-height: 22px;
+						}
+					}
+					.headding{
+						margin: 0 50px;
+						padding: 30px 8%;
+						border-radius: 5px;
+						width: 100%;
+					    background-color: rgba(255,255,255, 0.8);
+					    color: #000;
+						h3{
+							margin: 0;
+							font-size: 1.5em;
+							@media(max-width: 480px) {
+						    	font-size: 34px;
+							    letter-spacing: 1px;
+						    }
+						}
+						p{
+							text-align: center;
+							margin: 0;
+							@media(max-width: 480px) {
+						    	font-size: 14px;
+						    }
+							@media(min-width: 480px) {
+						    	br{
+						    		display: none
+						    	}
+						    }
+						}
+						h3, p {
+							width: 100%;
+						}
+						.md-button{
+							min-height: 55px !important; 
+							font-size: 2em !important;
+							transition: border 0.1s linear;
+							padding-top: 5px;
+							&:hover{
+								border: solid 2px;
+								background-color: rgba(255, 255, 255, 0.15);
+							}
+							span{
+								padding: 3px;
+							}
+						}
+
+					}
+				}
+		}
+	}
+	&.repairs{
+	}
+}

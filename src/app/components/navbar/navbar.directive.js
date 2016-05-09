@@ -141,6 +141,24 @@
           ]
         },
         {
+          title: "Indoor Air Quality",
+          isList: true,
+          subItems: [
+            {
+              name: "General",
+              href: "#/iaq/general"
+            },
+            {
+              name: "Duct Cleaning",
+              href: "#/iaq/cleaning"
+            },
+            {
+              name: "Attic Insulation",
+              href: "#/iaq/insulation"
+            }
+          ]
+        },
+        {
           title: "Kitchen",
           isList: true,
           subItems: [

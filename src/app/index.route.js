@@ -86,8 +86,8 @@
         controller: 'ResidentialController',
         controllerAs: 'res'
       })
-      .when('/iaq/installation', {
-        templateUrl: 'app/iaq/partials/installation.html',
+      .when('/iaq/insulation', {
+        templateUrl: 'app/iaq/partials/insulation.html',
         controller: 'ResidentialController',
         controllerAs: 'res'
       })

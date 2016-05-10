@@ -34,7 +34,7 @@
 				</div>
 		</div>
 		<div class="form-container">
-			<form ng-submit="con.sendMessage(message)" name="emailForm">
+			<form ng-submit="con.sendMessage(message)" name="con.emailForm">
 				<div>
 
 					<md-input-container class="md-icon-float md-block">
@@ -59,7 +59,7 @@
 					</md-input-container>
 					<input type="text" name="_gotcha" style="display:none" />
 					<input type="hidden" name="_next" value="#" />
-					<md-button flex="50" class="md-raised md-primary" type="submit" value="Send">Send</md-button>
+					<md-button flex="50" class="md-raised md-primary" type="submit" ng-disabled="con.emailForm.$invalid" value="Send">Send</md-button>
 				</div>
 			</form>
 		</div>	

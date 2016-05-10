@@ -46,7 +46,6 @@
             self.message = data.message;
           }
         });
-      console.log('banana');
     }
 
     

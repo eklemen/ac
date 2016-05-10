@@ -1,6 +1,6 @@
 <div class="main" layout="column" layout-fill>
 
-  <md-content flex="100">
+  <md-content>
 
     <div class="section1">
       <div layout-fill class="background">
@@ -60,7 +60,7 @@
 
     <div class="contact-form">
       <h3>Contact us today!</h3>
-      <form ng-submit="main.sendMessage(message)" name="emailForm">
+      <form ng-submit="main.sendMessage(message)" name="main.emailForm">
         <div>
 
           <md-input-container class="md-icon-float md-block">
@@ -85,7 +85,7 @@
           </md-input-container>
           <input type="text" name="_gotcha" style="display:none" />
           <input type="hidden" name="_next" value="#" />
-          <md-button flex="50" class="md-raised md-primary" type="submit" value="Send">Send</md-button>
+          <md-button flex="50" class="md-raised md-primary" type="submit" ng-disabled="main.emailForm.$invalid" value="Send">Send</md-button>
         </div>
       </form>
     </div>

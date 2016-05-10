@@ -34,7 +34,7 @@
 
 			<!-- Residential -->
 			<div flex="100" layout="row" layout-align="end center" class="second-row">
-			<md-menu>
+			<md-menu md-offset="0 45">
 				<md-button data-ng-class="{active: vm.isActive('/residential')}" ng-click="$mdOpenMenu()" href="">
 				<!-- data-ng-mouseenter="$mdOpenMenu() && vm.mouseIn()" -->
 					Residential
@@ -66,7 +66,7 @@
 			<!-- End Residential -->
 
 			<!-- Commercial -->
-			<md-menu>
+			<md-menu md-offset="0 45">
 				<md-button data-ng-class="{active: vm.isActive('/commercial')}" ng-click="$mdOpenMenu()" href="">
 				<!-- data-ng-mouseenter="$mdOpenMenu() && vm.mouseIn()" -->
 					Commercial
@@ -99,7 +99,7 @@
 			
 
 			<!-- Mini Splits -->
-			<md-menu>
+			<md-menu md-offset="0 45">
 				<md-button data-ng-class="{active: vm.isActive('/miniSplit')}" ng-click="$mdOpenMenu()" href="">
 					Mini Splits
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
@@ -120,7 +120,7 @@
 			<!-- End Mini Splits -->
 
 			<!-- Indoor Air Quality -->
-			<md-menu>
+			<md-menu md-offset="0 45">
 				<md-button data-ng-class="{active: vm.isActive('/iaq')}" ng-click="$mdOpenMenu()" href="">
 					Indoor Air Quality
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
@@ -147,8 +147,8 @@
 
 			
 			<!-- Kitchen -->
-			<md-menu>
-				<md-button data-ng-class="{active: vm.isActive('')}" ng-click="$mdOpenMenu()" href="">
+			<md-menu md-offset="0 45">
+				<md-button data-ng-class="{active: vm.isActive('/kitchen')}" ng-click="$mdOpenMenu()" href="">
 					Kitchen Services
 					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
 				</md-button>

@@ -1,4 +1,5 @@
 .mini-splits{
+	@include width-fix();
 	&.products{
 		.tabsdemoDynamicHeight md-content {
 		  background-color: transparent !important; }

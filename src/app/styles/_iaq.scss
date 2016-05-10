@@ -1,5 +1,48 @@
 .iaq{
 	@include width-fix();
 	padding: 20px;
+	&.cleaning{
+		.less{
+			display: none;
+			width: 50px;
+			color: #7CC242;
+		}
+		.read-more{
+			width: 100px;
+			color: #7CC242;
+		}
+		.is-expanded{
+			.read-more{
+				display: none;
+			}
+			.less{
+				display: block;
+			}
+		}
+		v-pane-header{
+			border: none;
+			margin: 0;
+			padding: 0;
+			&:before{
+				background-color: #498617 !important;
+			}
+		}
+		.accordion-items{
+			padding: 10px 15px;
+			margin-bottom: 10px;
+			.accordion-item{
+				margin-bottom: 25px;
+				h4, p{
+					margin: 5px 0;
+				}
+				v-pane-content{
+					padding: 0;
+					div{
+						padding: 0 0 10px 0;
+					}
+				}
+			}
+		}
+	}
 	
 }

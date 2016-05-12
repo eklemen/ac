@@ -5,10 +5,17 @@
 
 body{
 	font-family: 'Raleway', sans-serif;
+	p{
+		font-size: 1.2em;
+	}
 }
 
 .numbers{
 	font-family: 'Roboto', sans-serif;
+}
+
+.content-padding{
+	padding: 25px 5%;
 }
 
 $primary: #78ba3b;
@@ -45,4 +52,81 @@ md-content{
 
 .page-title{
 	width: 100%;
+}
+
+.section1{
+	margin-bottom: 70px;
+}
+
+@mixin background-image($url, $attachment:scroll, $opac:0){
+	background: linear-gradient(rgba(0, 0, 0, $opac), rgba(0, 0, 0, $opac)), url($url) no-repeat center center $attachment;
+	// -webkit-background-size: cover;
+	// -moz-background-size: cover;
+	// -o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+
+@mixin background-text($path, $attachment: scroll){
+	.background{
+		@include background-image($path, scroll, 0.6);
+		display: flex;
+		align-items: center;
+		min-height: 450px;
+		.content{
+			p{
+				background-color: white;
+				padding: 20px;
+				border-radius: 5px;
+				line-height: 22px;
+			}
+		}
+		.headding{
+			margin: 0 auto;
+			padding: 20px 5%;
+			border-radius: 5px;
+			width: 90%;
+		    background-color: rgba(255,255,255, 0.8);
+		    color: #000;
+			h3{
+				margin: 0 auto 10px auto;
+				font-size: 1.5em;
+				@media(max-width: 480px) {
+			    	font-size: 34px;
+				    letter-spacing: 1px;
+			    }
+			}
+			p{
+				text-align: center;
+				margin: 10px auto;
+				@media(max-width: 480px) {
+			    	font-size: 14px;
+			    }
+				@media(min-width: 480px) {
+			    	br{
+			    		display: none
+			    	}
+			    }
+			}
+			h3, p {
+				width: 100%;
+			    text-align: center;
+			    // background-color: rgba(0,0,0,0.7);
+			}
+			.md-button{
+				min-height: 55px !important; 
+				font-size: 2em !important;
+				transition: border 0.1s linear;
+				padding-top: 5px;
+				&:hover{
+					border: solid 2px;
+					background-color: rgba(255, 255, 255, 0.15);
+				}
+				span{
+					padding: 3px;
+				}
+			}
+
+		}
+	}
 }

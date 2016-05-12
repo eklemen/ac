@@ -1,6 +1,8 @@
 // residential
 .residential{
+	padding: 20px;
 	&.installation{
+		@include width-fix();
 		.section0{
 			.image-container{
 				padding: 0;
@@ -21,67 +23,43 @@
 			}
 		}
 		.section1{
-			.background{
-					@include background-image('../assets/images/site-photos/TBD2.jpg', scroll, 0.6);
-					display: flex;
-					align-items: center;
-					// background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-					.content{
-						p{
-							background-color: white;
-							padding: 20px;
-							border-radius: 5px;
-							line-height: 22px;
-						}
-					}
-					.headding{
-						margin: 0 50px;
-						padding: 30px 8%;
-						border-radius: 5px;
-						width: 100%;
-					    background-color: rgba(255,255,255, 0.8);
-					    color: #000;
-						h3{
-							margin: 0;
-							font-size: 1.5em;
-							@media(max-width: 480px) {
-						    	font-size: 34px;
-							    letter-spacing: 1px;
-						    }
-						}
-						p{
-							text-align: center;
-							margin: 0;
-							@media(max-width: 480px) {
-						    	font-size: 14px;
-						    }
-							@media(min-width: 480px) {
-						    	br{
-						    		display: none
-						    	}
-						    }
-						}
-						h3, p {
-							width: 100%;
-						}
-						.md-button{
-							min-height: 55px !important; 
-							font-size: 2em !important;
-							transition: border 0.1s linear;
-							padding-top: 5px;
-							&:hover{
-								border: solid 2px;
-								background-color: rgba(255, 255, 255, 0.15);
-							}
-							span{
-								padding: 3px;
-							}
-						}
-
-					}
-				}
+			@include background-text('../assets/images/site-photos/TBD2.jpg');
 		}
 	}
 	&.repairs{
+		padding: 0;
+		.section1{
+			padding: 5%;
+			@media(max-width: 660px){
+				padding: 0;
+			}
+			@include background-text('../assets/images/site-photos/for-background/IMG_1135.JPG', contain);
+			.background{
+				background-position: bottom !important;
+			}
+		}
+		.section2{
+			min-height: 350px;
+			width: 100%;
+			background-color: #E6E6E6;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.content-padding{
+				padding: 25px 8%;
+				max-width: 1100px;
+				.img-container{
+					max-width: 800px;
+
+				}
+			}
+		}
+	}
+
+	&.service{
+		@include width-fix();
+		.section1{
+			@include background-text('../assets/images/site-photos/Residential1.jpg');
+		}
 	}
 }

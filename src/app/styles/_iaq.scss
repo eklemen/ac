@@ -38,7 +38,16 @@
 	}
 
 	&.insulation{
-		@include width-fix();
+		.section1{
+			@include width-fix();
+			@include background-text('../assets/images/site-photos/for-background/attic-insulation.jpg', contain);
+			.headding{
+				h4{
+					font-size: 1.3em;
+					text-align: center;
+				}
+			}
+		}
 		.numbers{
 			font-size: 1.25em;
 		}

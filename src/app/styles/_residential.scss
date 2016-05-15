@@ -26,14 +26,20 @@
 			@include background-text('../assets/images/site-photos/TBD2.jpg');
 		}
 	}
-	&.repairs{
+	&.repairs, &.contracts{
 		padding: 0;
+		.page-title{
+			h2{
+				padding: 0 5%;
+			}
+		}
 		.section1{
 			padding: 5%;
 			@media(max-width: 660px){
 				padding: 0;
 			}
-			@include background-text('../assets/images/site-photos/for-background/IMG_1135.JPG', contain);
+			margin-bottom: 0;
+			// @include background-text('../assets/images/site-photos/for-background/IMG_1135.JPG', contain);
 			.background{
 				background-position: bottom !important;
 			}
@@ -53,6 +59,17 @@
 
 				}
 			}
+		}
+	}
+
+	&.repairs{
+		.section1{
+			@include background-text('../assets/images/site-photos/for-background/IMG_1135.JPG', contain);
+		}
+	}
+	&.contracts{
+		.section1{
+			@include background-text('../assets/images/site-photos/for-background/IMG_20151103_132422.jpg', contain);
 		}
 	}
 

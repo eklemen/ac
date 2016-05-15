@@ -1,64 +1,40 @@
 .commercial{
-	.title{
-		width: 100%;
-		padding-top: 40px;
-		padding-left: 5%;
-		h2{
-			text-align: left;
-		    margin: 0 auto;
-		    max-width: 1000px;
-		}
-	}
-	.section-container{
-		width: 100%;
-		// &.section1{
-		// 	position: relative;
-		// 	background-color: #fff;
-		// 	&:after{
-		// 		top: 100%;
-		// 		left: 50%;
-		// 		border: solid transparent;
-		// 		content: " ";
-		// 		height: 0;
-		// 		width: 0;
-		// 		position: absolute;
-		// 		pointer-events: none;
-		// 		border-color: rgba(234, 255, 235, 0);
-		// 		border-top-color: #fff;
-		// 		border-width: 50px;
-		// 		margin-left: -50px;
-		// 		z-index: 9;
-		// 	}
-		// }
-		&.section2{
+	&.services{
+		.section1{
+			min-height: 350px;
+			width: 100%;
 			background-color: #E6E6E6;
-			position: relative;
-			// &:after{
-			// 	top: 100%;
-			// 	left: 50%;
-			// 	border: solid transparent;
-			// 	content: " ";
-			// 	height: 0;
-			// 	width: 0;
-			// 	position: absolute;
-			// 	pointer-events: none;
-			// 	border-color: rgba(234, 255, 235, 0);
-			// 	border-top-color: #EAFFEB;
-			// 	border-width: 50px;
-			// 	margin-left: -50px;
-			// }
-		}
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 0;
+			.content-padding{
+				padding: 25px 8%;
+				max-width: 1100px;
+				.img-container{
+					max-width: 800px;
 
-		.sub-section{
-			max-width: 1000px;
-			margin: 0 auto;
-			padding: 45px 5%;
-			.image-container{
-				padding: 7%;
-				img{
-					width: 100%;
 				}
 			}
 		}
+		.section2, .page-title{
+			@include width-fix();
+		}
+
+		.section2{
+			@include fade-image();
+			margin-bottom: 60px;
+		}
+	}
+
+	&.installation{
+		@include width-fix();
+		.section1{
+			@include fade-image();
+		}
+	}
+
+	&.contracts{
+		@include width-fix();
 	}
 }

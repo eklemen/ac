@@ -1,7 +1,85 @@
 .iaq{
-	@include width-fix();
+	
 	padding: 20px;
+	&.general{
+		padding: 0;
+		.page-title{
+			h2{
+				padding: 0 5%;
+			}
+		}
+		.section1{
+			padding: 5%;
+			@media(max-width: 660px){
+				padding: 0;
+			}
+			margin-bottom: 0;
+			@include background-text('../assets/images/site-photos/for-background/IMG_2694.JPG', contain);
+			.background{
+				background-position: bottom !important;
+			}
+		}
+		.section2{
+			min-height: 350px;
+			width: 100%;
+			background-color: #E6E6E6;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.content-padding{
+				padding: 25px 8%;
+				max-width: 1100px;
+				.img-container{
+					max-width: 800px;
+
+				}
+			}
+		}
+	}
+
+	&.insulation{
+		@include width-fix();
+		.numbers{
+			font-size: 1.25em;
+		}
+	}
+
+
 	&.cleaning{
+		@include width-fix();
+		.tab-container{
+			margin-bottom: 60px;
+			.tabs{
+				.product-description{
+					width: 60%;
+					float: left;
+					h4{
+						margin: 0;
+					}
+					.img-mobile{
+						@include hide-above(660px);
+						display: block;
+						margin: 0 auto;
+						img{
+							width: 100%;
+						}
+					}
+				}
+				.product-img{
+					@include hide-below(660px);
+					width: 35%;
+					float: right;
+					img{
+						width: 100%;
+					}
+				}
+				@media(max-width: 660px){
+					.product-img, .product-description{
+						width: 100%;
+					}
+				}
+			}
+		}
 		.less{
 			display: none;
 			width: 50px;

@@ -2,25 +2,7 @@
 	@include width-fix();
 	padding: 20px;
 	.section2{
-		margin: 40px auto;
-		.image-container{
-			padding: 0;
-			margin: 0 -60px;
-			img{
-				width: 100%;
-				margin-left: -60px;
-			}
-			@media(max-width: 768px){
-				margin: 0 -25px;
-				img{
-					margin-left: -25px;
-				}
-			}
-		}
-		.content-box{
-			z-index: 2;
-		}
-		
+		@include fade-image();
 	}
 	.section1{
 			clear: both;

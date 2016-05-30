@@ -26,6 +26,10 @@ $primary: #78ba3b;
 	margin-right: 0;
 }
 
+.mar-bot{
+	margin-bottom: 70px !important;
+}
+
 @mixin hide-below($size: 680px){
 	@media(max-width: $size){
 		display: none;
@@ -91,7 +95,7 @@ md-content{
 
 @mixin background-text($path, $attachment: scroll){
 	.background{
-		@include background-image($path, scroll, 0.6);
+		@include background-image($path, scroll, 0.75);
 		display: flex;
 		align-items: center;
 		min-height: 450px;
@@ -108,8 +112,7 @@ md-content{
 			padding: 20px 5%;
 			border-radius: 5px;
 			width: 90%;
-		    background-color: rgba(255,255,255, 0.8);
-		    color: #000;
+		    color: #fff;
 			h3{
 				margin: 0 auto 10px auto;
 				font-size: 1.5em;

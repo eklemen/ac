@@ -1,5 +1,6 @@
 .about{
 	@include width-fix();
+	overflow-x: hidden;
 	padding: 20px;
 	.section2{
 		@include fade-image();

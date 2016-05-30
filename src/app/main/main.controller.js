@@ -9,6 +9,45 @@
   function MainController($http, $httpParamSerializerJQLike) {
     var self = this;
 
+    self.brands = [
+      {
+        src: "assets/images/brands/brand01.png",
+        alt: ""
+      },
+      {
+        src: "assets/images/brands/brand02.png",
+        alt: ""
+      },
+      {
+        src: "assets/images/brands/brand03.png",
+        alt: ""
+      },
+      {
+        src: "assets/images/brands/brand04.png",
+        alt: ""
+      },
+      {
+        src: "assets/images/brands/brand05.png",
+        alt: ""
+      },
+      {
+        src: "assets/images/brands/brand06.png",
+        alt: ""
+      },
+      {
+        src: "assets/images/brands/brand07.png",
+        alt: ""
+      },
+      {
+        src: "assets/images/brands/brand08.png",
+        alt: ""
+      },
+      {
+        src: "assets/images/brands/brand09.png",
+        alt: ""
+      },
+    ]
+
     self.message = {};
     self.alertSuccess = function(){
       swal('Thanks!',

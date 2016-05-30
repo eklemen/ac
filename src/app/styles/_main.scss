@@ -1,5 +1,4 @@
 .main{
-	height: 100vh;
 	.section1{
 		clear: both;
 		height: 500px;
@@ -7,7 +6,7 @@
 			height: 450px;
 		}
 		.background{
-			@include background-image('../assets/images/site-photos/homepage3.jpg');
+			@include background-image('../assets/images/site-photos/homepage2.jpg');
 			display: flex;
 			align-items: center;
 			.content{
@@ -75,6 +74,67 @@
 			}
 		}
 	}
+
+	.section3{
+		text-align: center;
+		.sub{
+			display: inline-block;
+			width: 33%;
+			padding: 20px;
+			box-sizing: border-box;
+			margin: 0 auto;
+			.image-container{
+				position: relative;
+				overflow: hidden;
+				display: block;
+				margin: 0 auto;
+				max-width: 300px;
+				background-color: #000;
+				img{
+					width: 100%;
+					opacity: 0.6;
+					transition: all .1s ease;
+					&:hover{
+						opacity: 0.75;
+						transform: scale(1.05);
+					}
+				}
+			}
+			.text{
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+				color: #fff;
+				background-color: rgba(0,0,0,0.6);
+				h3{
+					margin: 0;
+					font-size: 2em;
+				}
+			}
+			@media(max-width: 830px){
+				padding: 20px 10px;
+				width: 30%;
+				h3{
+					font-size: 1.5em;
+				}
+
+			}
+			@media(max-width: 768px){
+				width: 80%;
+				.image-container{
+					height: 250px;
+					max-width: none;
+					img{
+						transition: none;
+						&:hover{
+							transform: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
 	.brands{
 		flex-wrap:wrap;
 		height: auto;
@@ -133,10 +193,11 @@
 		}
 	}
 	.contact-form{
+		margin-bottom: 70px;
+		padding: 70px 5% 40px 5%;
 		@media(max-width: 660px){
 			margin-bottom: 250px;
 		}
-		padding-top: 70px;
 		@include width-fix(750px);
 		h3{
 			margin-bottom: 30px;
@@ -166,36 +227,9 @@
 	}
 
 	.section4{
-		min-height: 300px;
-		padding: 4%;
-		.form-container{
-			width: 50%;
-		    padding-right: 5%;
-
-			.md-block{
-				// width: 33%;
-			}
-			@media(max-width: 768px){
-				padding: 0;
-				width: 100%;
-				.md-block{
-					width: 90%;
-					margin: 0 auto;
-				}
-				button{
-					margin-left: 5%;
-				}
-			}
-		}
-		.form-image{
-			width: 50%;
-			@media(max-width: 768px){
-				display: none;
-			}
-			img{
-				margin: 0 auto;
-				display: block;
-			}
-		}
+		height: 400px;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../assets/images/homepage1.jpg') no-repeat center 70% scroll;
+		background-size: cover;
+		position: relative;
 	}
 }

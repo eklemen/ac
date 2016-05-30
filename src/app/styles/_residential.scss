@@ -76,7 +76,69 @@
 	&.service{
 		@include width-fix();
 		.section1{
-			@include background-text('../assets/images/site-photos/Residential1.jpg');
+			position: relative;
+			.bg{
+				overflow: hidden;
+				height: 100%;
+				img{
+					width: 100%;
+				    margin-top: -60px;
+				}
+			}
+			.headding{
+				position: absolute;
+				background-color: transparent;
+				top: 0;
+				right: 3%;
+				width: 55%;
+			}
+			
+			@media(min-width: 1000px){
+				.bg{
+					max-height: 650px;
+				}
+				.headding{
+					width: 40%;
+				}
+			}
+			@media(max-width: 768px){
+				color: white;
+				.bg{
+					background-color: black;
+					position: relative;
+					img{
+						opacity: 0.3;
+					}
+				}
+				.headding{
+					width: 90%;
+					height: 70%;
+					top: 0;
+					bottom: 0;
+					.p2{
+						display: block;
+					}
+					.p3{
+						display: none;
+					}
+				}
+			}
+			.p3{
+				@include hide-above(945px);
+			}
+			.p2{
+				margin-top: 0;
+				@include hide-below(944px);
+				@media(min-width: 944px){
+					width: 75%;
+					margin-right: -150px;
+				}
+				@media(min-width: 1000px){
+					width: 100%;
+					margin-right: 0;
+
+				}
+			}
 		}
 	}
 }

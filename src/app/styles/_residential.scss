@@ -1,6 +1,7 @@
 // residential
 .residential{
 	padding: 20px;
+	overflow: hidden;
 	&.installation{
 		@include width-fix();
 		.section0{
@@ -25,6 +26,9 @@
 		.section1{
 			@include background-text('../assets/images/site-photos/TBD2.jpg');
 		}
+		.section4{
+			@include fade-image();
+		}
 	}
 	&.repairs, &.contracts{
 		padding: 0;
@@ -39,15 +43,10 @@
 				padding: 0;
 			}
 			margin-bottom: 0;
-			// @include background-text('../assets/images/site-photos/for-background/IMG_1135.JPG', contain);
-			.background{
-				background-position: bottom !important;
-			}
 		}
 		.section2{
 			min-height: 350px;
 			width: 100%;
-			background-color: #E6E6E6;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -63,13 +62,38 @@
 	}
 
 	&.repairs{
+		@include width-fix();
 		.section1{
-			@include background-text('../assets/images/site-photos/for-background/IMG_1135.JPG', contain);
+			@include background-text('../assets/images/site-photos/Residential_Repairs_1.jpeg', contain);
+			.background{
+				min-height: 320px;
+			}
+		}
+		.section2{
+			padding:  20px 5%;
+			@include fade-image(0);
+			.content-box{
+				margin-left: -100px;
+				@media(max-width: 600px){
+			    	margin: 0 auto;
+			    }
+			}
 		}
 	}
 	&.contracts{
+		@include width-fix();
 		.section1{
 			@include background-text('../assets/images/site-photos/for-background/IMG_20151103_132422.jpg', contain);
+		}
+		.section2{
+			padding: 20px 5%;
+			@include fade-image(-90px);
+			.content-box{
+			    margin-right: -40px;
+			    @media(max-width: 600px){
+			    	margin: 0 auto;
+			    }
+			}
 		}
 	}
 

@@ -1,6 +1,5 @@
 // residential
 .residential{
-	padding: 20px;
 	overflow: hidden;
 	&.installation{
 		@include width-fix();
@@ -38,7 +37,6 @@
 			}
 		}
 		.section1{
-			padding: 5%;
 			@media(max-width: 660px){
 				padding: 0;
 			}
@@ -68,11 +66,13 @@
 			.background{
 				min-height: 320px;
 			}
+			padding: 40px 0 0 0;
 		}
 		.section2{
-			padding:  20px 5%;
-			@include fade-image(0);
+			@include fade-image-reverse();
+
 			.content-box{
+				padding-right: 5%;
 				margin-left: -100px;
 				@media(max-width: 600px){
 			    	margin: 0 auto;
@@ -86,14 +86,7 @@
 			@include background-text('../assets/images/site-photos/for-background/IMG_20151103_132422.jpg', contain);
 		}
 		.section2{
-			padding: 20px 5%;
 			@include fade-image(-90px);
-			.content-box{
-			    margin-right: -40px;
-			    @media(max-width: 600px){
-			    	margin: 0 auto;
-			    }
-			}
 		}
 	}
 
@@ -120,9 +113,15 @@
 			@media(min-width: 1000px){
 				.bg{
 					max-height: 650px;
+					margin-top: -100px;
 				}
 				.headding{
 					width: 40%;
+				}
+			}
+			@media(min-width: 1200px){
+				.bg{
+					margin-top: -150px;
 				}
 			}
 			@media(max-width: 768px){
@@ -162,6 +161,9 @@
 					margin-right: 0;
 
 				}
+			}
+			.p3{
+				padding: 20px 5%;
 			}
 		}
 	}

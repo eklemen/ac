@@ -8,7 +8,11 @@
 			<p>Our maintenance program includes several visits each year during which our technicians will thoroughly inspect, clean and examine your entire HVAC system. They will clean out any components that are dirty and alert you if there are any necessary  replacements or repairs that need to happen.</p>
 		</div>
 		<div class="image-container" flex hide-xs>
-			<img class="margin-auto" src="http://placehold.it/350x300" alt="">
+			<ul rn-carousel class="image">
+			  <li ng-repeat="image in res.contracts">
+			    <div class="layer"><img src="{{image}}" alt=""></div>
+			  </li>
+			</ul>
 		</div>
 		
 	</div>

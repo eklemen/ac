@@ -1,9 +1,8 @@
 .commercial{
 	&.services{
 		@include width-fix();
-		padding: 0 5%;
 		.section1{
-			@include fade-image(0);
+			@include fade-image-reverse(-30px);
 			min-height: 350px;
 			width: 100%;
 			display: flex;
@@ -20,6 +19,7 @@
 
 		.section2{
 			@include background-text('../assets/images/site-photos/Commercial_Service_2.jpeg', contain);
+			width: 100%;
 			margin-bottom: 60px;
 		}
 	}
@@ -29,10 +29,19 @@
 		overflow: hidden;
 		.section1{
 			@include fade-image();
+			.content-box{
+				margin-right: -60px;
+			}
 		}
 	}
 
 	&.contracts{
 		@include width-fix();
+		.image-container{
+			height: 300px;
+			.image{
+				height: 300px;
+			}
+		}
 	}
 }

@@ -1,8 +1,27 @@
 .mini-splits{
-	@include width-fix();
 	&.general{
 		.tab-container{
-			max-width: 900px;
+			width: 100%;
+			md-tabs-wrapper{
+				padding-left: 5%;
+			}
+
+			.product-description, .tab-title{
+				@include width-fix(950px);
+			}
+		}
+		.bg{
+			color: #000;
+			padding: 30px 5%;
+			&.general{
+				@include background-image('../assets/images/site-photos/MiniSplit_GeneralInfo.jpg', scroll, 0.5, 255);
+			}
+			&.installation{
+				@include background-image('../assets/images/site-photos/MiniSplit_Installation.jpg', scroll, 0.85, 255);
+			}
+			&.repair{
+				@include background-image('../assets/images/site-photos/MiniSplitRepair.jpg', scroll, 0.7, 255);
+			}
 		}
 	}
 

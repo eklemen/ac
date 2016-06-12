@@ -2,13 +2,18 @@
 	<div class="page-title">	
 		<h2>Maintenence Contracts</h2>
 	</div>
-	<div class="section1 mar-bot" flex layout="row" layout-align="space-between center">
-		<div flex>
+	<div class="section1 mar-bot" >
+		<div class="content-box">
 			<p>Probably the best thing that you can do for the efficiency and consistency of your HVAC system is to get it regularly inspected and tuned up by a professional. Zenit Service offers complete commercial and industrial HVAC maintenance contracts for all different types of systems. </p>
 			<p>Our maintenance program includes several visits each year during which our technicians will thoroughly inspect, clean and examine your entire HVAC system. They will clean out any components that are dirty and alert you if there are any necessary  replacements or repairs that need to happen.</p>
 		</div>
-		<div class="image-container" flex hide-xs>
-			<ul rn-carousel class="image">
+		<div class="image-container">
+			<ul class="image"
+				rn-carousel
+				rn-carousel-auto-slide="4"
+				rn-carousel-transition="fadeAndSlide"
+				rn-carousel-duration="700"
+				rn-carousel-easing="easeInOutQuad">
 			  <li ng-repeat="image in res.contracts">
 			    <div class="layer"><img src="{{image}}" alt=""></div>
 			  </li>

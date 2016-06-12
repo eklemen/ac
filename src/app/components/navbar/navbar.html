@@ -144,28 +144,11 @@
 				</md-menu-content>
 			</md-menu>
 			<!-- end IAQ -->
-
 			
-			<!-- Kitchen -->
-			<md-menu md-offset="0 45">
-				<md-button data-ng-class="{active: vm.isActive('/kitchen')}" ng-click="$mdOpenMenu()" href="">
-					Kitchen Services
-					<md-icon class="material-icons md-mainColor md-hue-4 icon">arrow_drop_down</md-icon>
-				</md-button>
-				<md-menu-content width="4" data-ng-mouseleave="vm.mouseOut()" data-ng-mouseenter="vm.mouseIn()">
-					<!-- <md-menu-item>
-						<md-button href="#/commercial/contracts">
-							Hood Cleaning
-						</md-button>
-					</md-menu-item> -->
-					<md-menu-item>
-						<md-button href="#/kitchen/refrigeration">
-							Refrigeration
-						</md-button>
-					</md-menu-item>
-				</md-menu-content>
-			</md-menu>
-			<!-- Kitchen -->
+			<!-- Refrigeration -->
+			<md-button data-ng-class="{active: vm.isActive('/refrigeration')}" href="#/refrigeration">
+				Refrigeration
+			</md-button>
 			</div>
 		</md-menu-bar>
 	</div>

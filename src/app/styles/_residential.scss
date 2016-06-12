@@ -27,6 +27,7 @@
 		}
 		.section4{
 			@include fade-image();
+			margin-bottom: 0;
 		}
 	}
 	&.repairs, &.contracts{
@@ -62,7 +63,7 @@
 	&.repairs{
 		@include width-fix();
 		.section1{
-			@include background-text('../assets/images/site-photos/Residential_Repairs_1.jpeg', contain);
+			@include background-text('../assets/images/site-photos/Residential_Repairs_1.jpeg', scroll, 0.6);
 			.background{
 				min-height: 320px;
 			}
@@ -78,15 +79,17 @@
 			    	margin: 0 auto;
 			    }
 			}
+			margin-bottom: -5px;
 		}
 	}
 	&.contracts{
 		@include width-fix();
 		.section1{
-			@include background-text('../assets/images/site-photos/for-background/IMG_20151103_132422.jpg', contain);
+			@include background-text('../assets/images/site-photos/for-background/IMG_20151103_132422.jpg', scroll, 0.75);
 		}
 		.section2{
 			@include fade-image(-90px);
+			margin-bottom: 0;
 		}
 	}
 
@@ -113,15 +116,9 @@
 			@media(min-width: 1000px){
 				.bg{
 					max-height: 650px;
-					margin-top: -100px;
 				}
 				.headding{
 					width: 40%;
-				}
-			}
-			@media(min-width: 1200px){
-				.bg{
-					margin-top: -150px;
 				}
 			}
 			@media(max-width: 768px){

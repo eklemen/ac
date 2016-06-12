@@ -10,7 +10,7 @@
 			&#about{
 				height: 450px;
 			}
-			@include background-text('../assets/images/site-photos/AboutUs.jpg');
+			@include background-text('../assets/images/site-photos/AboutUs.jpg', scroll, 0.6);
 		}
 
 	&.installation{

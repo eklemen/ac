@@ -159,14 +159,9 @@
           ]
         },
         {
-          title: "Kitchen",
-          isList: true,
-          subItems: [
-            {
-              name: "Refrigeration",
-              href: "#/kitchen/refrigeration"
-            }
-          ]
+          title: "Refrigeration",
+          isList: false,
+          href: "#/refrigeration"
         }
       ]
     }

@@ -92,17 +92,12 @@
         controllerAs: 'res'
       })
 
-      // Kitchen 
-      .when('/kitchen/refrigeration/', {
-        templateUrl: 'app/kitchen/partials/refrigeration.html',
+      // Refrigeration 
+      .when('/refrigeration/', {
+        templateUrl: 'app/refrigeration/partials/refrigeration.html',
         controller: 'ResidentialController',
         controllerAs: 'res'
       })
-      // .when('/kitchen/installation', {
-      //   templateUrl: 'app/iaq/partials/installation.html',
-      //   controller: 'ResidentialController',
-      //   controllerAs: 'res'
-      // })
 
       .otherwise({
         redirectTo: '/'

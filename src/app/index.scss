@@ -55,6 +55,10 @@ html {
   font-family: 'Roboto Slab', serif;
 }
 
+body > div[ng-view]{
+  height: 100% !important;
+}
+
 .hidden {
   visibility: hidden;
 }

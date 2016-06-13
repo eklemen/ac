@@ -94,7 +94,7 @@
 	&.insulation{
 		.section1{
 			@include width-fix();
-			@include background-text('../assets/images/site-photos/for-background/attic-insulation.jpg', contain, 0);
+			@include background-text('../assets/images/site-photos/for-background/attic-insulation.jpg', scroll, 0.6);
 			.headding{
 				h4{
 					font-size: 1.3em;
@@ -104,6 +104,11 @@
 		}
 		.numbers{
 			font-size: 1.25em;
+		}
+		.section2{
+			h3{
+				padding: 10px 5%;
+			}
 		}
 	}
 

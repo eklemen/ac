@@ -24,19 +24,19 @@
 	<!-- endinject -->
 	<!-- endbuild -->
   </head>
-  <body>
+  <body layout-align="column" layout-align="center center" layout-fill>
 	<!--[if lt IE 10]>
 	  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<header>
+	<header flex>
 	  <acme-navbar></acme-navbar>
 	</header>
 
 
-	<div ng-view></div>
+	<div ng-view flex="initial"></div>
 
-	<footer>
+	<footer flex>
 	  <md-toolbar>
 			<div class="md-toolbar-tools" layout-align="space-between end">
 				<div layout="row" class="left">
@@ -49,9 +49,21 @@
 								</div>
 							</a>
 							<md-button class="numbers" href="tel:1-407-878-7840" layout-align="center center">407-878-7840</md-button>
+							<div hide-gt-xs>
+								<md-button href="#/" aria-label="Home">
+									Home
+								</md-button>
+								<md-button href="#/about" aria-label="About Us">
+									About Us
+								</md-button>
+								<md-button href="#/contact" aria-label="Contact">
+									Contact
+								</md-button>
+							</div>
 					</div>
+
 				</div>
-				<div layout="column" class="right">
+				<div layout="column" class="right" hide-xs>
 					<md-button href="#/" aria-label="Home">
 						Home
 					</md-button>

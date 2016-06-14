@@ -63,7 +63,7 @@
     self.sendMessage = function() {
       $http({
         method  : 'POST',
-        url     : '//formspree.io/ejklemen@gmail.com',
+        url     : '//formspree.io/office@zenitservice.com',
         data    : $httpParamSerializerJQLike(self.message), // pass in data as strings
         headers: {
           'Accept': 'application/json',

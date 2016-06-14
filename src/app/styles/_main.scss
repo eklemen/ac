@@ -28,7 +28,7 @@
 			    background-color: rgba(0,0,0, 0.8);
 			    color: #fff;
 			    @media(max-width: 660px){
-			    	margin-top: 515px;
+			    	margin-top: 500px;
 			    	.numbers{
 			    		font-size: 1.8em;
 			    	}
@@ -37,6 +37,7 @@
 					font-size: 4em;
 					letter-spacing: 2px;
 					margin: 0;
+					font-family: 'Futurica Bold';
 					@media(max-width: 480px) {
 				    	font-size: 34px;
 					    letter-spacing: 1px;
@@ -45,6 +46,7 @@
 				p{
 					text-align: center;
 					margin: 0;
+					font-family: 'Futurica Light';
 					@media(max-width: 480px) {
 				    	font-size: 14px;
 				    }

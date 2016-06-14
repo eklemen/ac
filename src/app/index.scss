@@ -25,6 +25,22 @@
        url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff) format('woff'),
        url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Futurica Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/fonts/FUTU_EXB.TTF); /* For IE6-8 */
+  src: local('Futurica Bold'),
+       url(../assets/fonts/FUTU_EXB.TTF) format('truetype');
+}
+@font-face {
+  font-family: 'Futurica Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/fonts/FUTU_LT.TTF); /* For IE6-8 */
+  src: local('Futurica Light'),
+       url(../assets/fonts/FUTU_LT.TTF) format('truetype');
+}
 
 .material-icons {
   font-family: 'Material Icons';

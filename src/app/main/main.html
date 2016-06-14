@@ -63,22 +63,25 @@
       <div>
 
         <md-input-container class="md-icon-float md-block">
-          <label>Name</label>
+          <label>Name*</label>
           <md-icon class="material-icons md-mainColor icon">person</md-icon>
           <input name="name" ng-model="main.message.name" required="true">
           <div ng-messages="main.message.name.$error">
-            <div ng-message="required">Please enter your name</div>
+            <div ng-message="required">Please enter your name.</div>
           </div>
         </md-input-container>
 
         <md-input-container class="md-icon-float md-block">
-          <label>Email</label>
+          <label>Email*</label>
           <md-icon class="material-icons md-mainColor icon">email</md-icon>
           <input name="_replyto" ng-model="main.message.replyTo" required="true" ng-pattern="/^.+@.+\..+$/">
+          <div ng-messages="main.message.email.$error">
+            <div ng-message="required">Please enter a valid email address.</div>
+          </div>
         </md-input-container>
 
         <md-input-container class="md-icon-float md-block text-area">
-          <label>Message</label>
+          <label>Message*</label>
           <md-icon class="material-icons md-mainColor icon">edit</md-icon>
           <textarea ng-model="main.message.body" name="message" columns="1" rows="3" placeholder="Enter your message here..." required="true"></textarea>
         </md-input-container>

@@ -18,7 +18,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($scope, $mdMenu, $timeout, $log, $mdSidenav, $mdComponentRegistry) {
+    function NavbarController($scope, $mdMenu, $timeout, $log, $mdSidenav, $mdComponentRegistry, $location) {
       var vm = this;
       var timer;
 
@@ -31,6 +31,12 @@
       //     $scope.tooltipVisible = self.isOpen;
       //   }
       // });
+      vm.isActive = function(route){
+        var base = $location.path().split('/')[1];
+        var myPath = '/'+base;
+        return route === myPath;
+      }
+
       vm.toggle = angular.noop;
         vm.isOpen = function() { return false };
         
@@ -46,7 +52,7 @@
       vm.close = function() {
         $mdSidenav('left').close()
           .then(function(){
-            $log.debug("close LEFT is done");
+            return;
           });
       };
 
@@ -61,10 +67,15 @@
       vm.mouseOut = function(){
         timer = $timeout(function () {
           $mdMenu.hide(null, { closeAll: true })
-        }, 500);
+        }, 300);
       };
 
       vm.menuItems = [
+        {
+          title: "Home",
+          isList: false,
+          href: "#/"
+        },
         {
           title: "About",
           isList: false,
@@ -102,18 +113,55 @@
           isList: true,
           subItems: [
             {
-              name: "Controls",
-              href: "#/commercial/controls"
+              name: "Service",
+              href: "#/commercial/service"
             },
             {
-              name: "IAQ",
-              href: "#/commercial/iaq"
+              name: "Installation",
+              href: "#/commercial/installation"
             },
             {
               name: "Maint. Contracts",
               href: "#/commercial/contracts"
             }
           ]
+        },
+        {
+          title: "Mini Splits",
+          isList: true,
+          subItems: [
+            {
+              name: "General",
+              href: "#/miniSplit/general"
+            },
+            {
+              name: "Products",
+              href: "#/miniSplit/products"
+            }
+          ]
+        },
+        {
+          title: "Indoor Air Quality",
+          isList: true,
+          subItems: [
+            {
+              name: "General",
+              href: "#/iaq/general"
+            },
+            {
+              name: "Duct Cleaning",
+              href: "#/iaq/cleaning"
+            },
+            {
+              name: "Attic Insulation",
+              href: "#/iaq/insulation"
+            }
+          ]
+        },
+        {
+          title: "Refrigeration",
+          isList: false,
+          href: "#/refrigeration"
         }
       ]
     }

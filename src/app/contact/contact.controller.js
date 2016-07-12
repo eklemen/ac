@@ -6,8 +6,21 @@
     .controller('ContactController', ContactController);
 
   /** @ngInject */
-  function ContactController($http, $httpParamSerializerJQLike) {
+  function ContactController($http, $httpParamSerializerJQLike, NgMap) {
     var self = this;
+
+    NgMap.getMap().then(function(map) {
+    });
+
+    self.myNavFunc = function (){
+      // If it's an iPhone..
+      if( (navigator.platform.indexOf("iPhone") != -1) 
+          || (navigator.platform.indexOf("iPod") != -1)
+          || (navigator.platform.indexOf("iPad") != -1))
+           window.open("//maps.apple.com/?saddr=My+Location&daddr=5360+McIntosh+Point,+Sanford,+FL/@28.7336605,-81.3018416,17z");
+      else
+           window.open("//maps.google.com/?saddr=My+Location&daddr=5360+McIntosh+Point,+Sanford,+FL/");
+    }
 
     self.message = {};
     self.alertSuccess = function(){
@@ -24,7 +37,7 @@
     self.sendMessage = function() {
       $http({
         method  : 'POST',
-        url     : '//formspree.io/ejklemen@gmail.com',
+        url     : '//formspree.io/office@zenitservice.com',
         data    : $httpParamSerializerJQLike(self.message), // pass in data as strings
         headers: {
           'Accept': 'application/json',
@@ -33,7 +46,6 @@
         Accept: 'application/json'
        })
       .success(function(data) {
-          console.log(data);
 
           if (!data.success) {
             // if not successful, bind errors to error variables
@@ -46,7 +58,6 @@
             self.message = data.message;
           }
         });
-      console.log('banana');
     }
 
     

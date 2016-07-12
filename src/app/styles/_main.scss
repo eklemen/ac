@@ -1,13 +1,7 @@
-@mixin background-image($url, $attachment:scroll){
-	background: url($url) no-repeat center center $attachment;
-	// -webkit-background-size: cover;
-	// -moz-background-size: cover;
-	// -o-background-size: cover;
-	background-size: cover;
-	position: relative;
-}
-
 .main{
+	height: 100%;
+	overflow: hidden;
+	padding-top: 0;
 	.section1{
 		clear: both;
 		height: 500px;
@@ -15,7 +9,7 @@
 			height: 450px;
 		}
 		.background{
-			@include background-image('../assets/images/vans1.png');
+			@include background-image('../assets/images/site-photos/homepage2.jpg');
 			display: flex;
 			align-items: center;
 			.content{
@@ -27,14 +21,21 @@
 				}
 			}
 			.headding{
+				margin-top: 475px;
 				width: 100%;
-			    height: 100%;
-			    background-color: rgba(0,0,0, 0.4);
+			    background-color: rgba(0,0,0, 0.8);
 			    color: #fff;
+			    @media(max-width: 660px){
+			    	margin-top: 500px;
+			    	.numbers{
+			    		font-size: 1.8em;
+			    	}
+			    }
 				h3{
 					font-size: 4em;
 					letter-spacing: 2px;
 					margin: 0;
+					font-family: 'Futurica Bold';
 					@media(max-width: 480px) {
 				    	font-size: 34px;
 					    letter-spacing: 1px;
@@ -43,8 +44,9 @@
 				p{
 					text-align: center;
 					margin: 0;
+					font-family: 'Futurica Light';
 					@media(max-width: 480px) {
-				    	font-size: 24px;
+				    	font-size: 14px;
 				    }
 					@media(min-width: 480px) {
 				    	br{
@@ -52,14 +54,103 @@
 				    	}
 				    }
 				}
+				h3, p {
+					width: 100%;
+				    text-align: center;
+				}
+				.md-button{
+					min-height: 55px !important; 
+					font-size: 2em !important;
+					transition: all 0.1s linear;
+					padding-top: 5px;
+					border: solid 2px transparent;
+					margin: 10px;
+					color: #7cc242;
+					&:hover{
+						border: solid 2px;
+						color: #A4C787;
+						background-color: rgba(255, 255, 255, 0.15);
+					}
+					span{
+						padding: 3px;
+					}
+				}
 
 			}
 		}
 	}
+
+	.section3{
+		text-align: center;
+		.sub{
+			display: inline-block;
+			width: 33%;
+			padding: 20px;
+			box-sizing: border-box;
+			margin: 0 auto;
+			.image-container{
+				position: relative;
+				overflow: hidden;
+				display: block;
+				margin: 0 auto;
+				max-width: 300px;
+				background-color: #000;
+				img{
+					width: 100%;
+					opacity: 0.6;
+					transition: all .1s ease;
+					&:hover{
+						opacity: 0.75;
+						transform: scale(1.05);
+					}
+				}
+			}
+			.text{
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+				color: #fff;
+				background-color: rgba(0,0,0,0.6);
+				h3{
+					margin: 0;
+					font-size: 2em;
+				}
+			}
+			@media(max-width: 830px){
+				padding: 20px 10px;
+				width: 30%;
+				h3{
+					font-size: 1.5em;
+				}
+
+			}
+			@media(max-width: 768px){
+				width: 80%;
+				.image-container{
+					height: 250px;
+					max-width: none;
+					img{
+						transition: none;
+						&:hover{
+							transform: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
 	.brands{
 		flex-wrap:wrap;
 		height: auto;
 		width: 100%;
+		margin-top: 90px;
+		&.text-only{
+			margin-bottom: 60px;
+		}
+		&.logos{
+			margin: 15px 10px;
+		}
 		.text-block{
 			width: 100%;
 			margin-bottom: 24px;
@@ -112,38 +203,45 @@
 			}
 		}
 	}
-
-	.section4{
-		min-height: 300px;
-		padding: 4%;
-		.form-container{
-			width: 50%;
-		    padding-right: 5%;
-
+	.contact-form{
+		margin-bottom: 70px;
+		padding: 70px 5% 40px 5%;
+		@media(max-width: 660px){
+			margin-bottom: 250px;
+		}
+		@include width-fix(750px);
+		h3{
+			margin-bottom: 30px;
+		}
+		form{
+			margin: 0 auto;
+			max-width: 750px;
+			width: 100%;
 			.md-block{
-				// width: 33%;
-			}
-			@media(max-width: 768px){
-				padding: 0;
-				width: 100%;
-				.md-block{
-					width: 90%;
-					margin: 0 auto;
+				.material-icons{
+					display: inline-block;
 				}
-				button{
+			}
+			button{
+				margin-left: 0;
+				@media(max-width: 600px){
 					margin-left: 5%;
 				}
 			}
-		}
-		.form-image{
-			width: 50%;
-			@media(max-width: 768px){
-				display: none;
-			}
-			img{
-				margin: 0 auto;
-				display: block;
+			.text-area{
+				padding-left: 37px;
+				label{
+					margin-left: 36px;
+				}
 			}
 		}
+		width: 80%;
+	}
+
+	.section4{
+		height: 400px;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../assets/images/homepage1.jpg') no-repeat center 70% scroll;
+		background-size: cover;
+		position: relative;
 	}
 }

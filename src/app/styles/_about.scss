@@ -1,0 +1,22 @@
+.about{
+	@include width-fix();
+	overflow-x: hidden;
+	.section2{
+		@include fade-image();
+	}
+	.section1{
+			clear: both;
+			height: 500px;
+			&#about{
+				height: 450px;
+			}
+			@include background-text('../assets/images/site-photos/AboutUs.jpg', scroll, 0.6);
+		}
+
+	&.installation{
+		@include width-fix(1100px);
+		img{
+			max-width: 420px;
+		}
+	}
+}

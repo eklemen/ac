@@ -1,0 +1,14 @@
+.refrigeration{
+	@include width-fix();
+	.section1{
+		@include background-text('../assets/images/site-photos/Refrigeration.jpg', scroll, 0.35);
+		.background{
+			min-height: 400px;
+		}
+		padding: 40px 0 0 0;
+	}
+	.section2{
+		padding: 0 5%;
+		@include width-fix(900px);
+	}
+}

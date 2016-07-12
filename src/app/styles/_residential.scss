@@ -1,0 +1,167 @@
+// residential
+.residential{
+	overflow: hidden;
+	&.installation{
+		@include width-fix();
+		.section0{
+			.image-container{
+				padding: 0;
+				margin: 0 -20px;
+				img{
+					width: 100%;
+					margin-left: -20px;
+				}
+				@media(max-width: 768px){
+					margin: 0 -25px;
+					img{
+						margin-left: -25px;
+					}
+				}
+			}
+			.content-box{
+				z-index: 2;
+			}
+		}
+		.section1{
+			@include background-text('../assets/images/site-photos/TBD2.jpg');
+		}
+		.section4{
+			@include fade-image();
+			margin-bottom: 0;
+		}
+	}
+	&.repairs, &.contracts{
+		padding: 0;
+		.page-title{
+			h2{
+				padding: 0 5%;
+			}
+		}
+		.section1{
+			@media(max-width: 660px){
+				padding: 0;
+			}
+			margin-bottom: 0;
+		}
+		.section2{
+			min-height: 350px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.content-padding{
+				padding: 25px 8%;
+				max-width: 1100px;
+				.img-container{
+					max-width: 800px;
+
+				}
+			}
+		}
+	}
+
+	&.repairs{
+		@include width-fix();
+		.section1{
+			@include background-text('../assets/images/site-photos/Residential_Repairs_1.jpeg', scroll, 0.6);
+			.background{
+				min-height: 320px;
+			}
+			padding: 40px 0 0 0;
+		}
+		.section2{
+			@include fade-image-reverse();
+
+			.content-box{
+				padding-right: 5%;
+				margin-left: -100px;
+				@media(max-width: 600px){
+			    	margin: 0 auto;
+			    }
+			}
+			margin-bottom: -5px;
+		}
+	}
+	&.contracts{
+		@include width-fix();
+		.section1{
+			@include background-text('../assets/images/site-photos/for-background/IMG_20151103_132422.jpg', scroll, 0.75);
+		}
+		.section2{
+			@include fade-image(-90px);
+			margin-bottom: 0;
+		}
+	}
+
+	&.service{
+		@include width-fix();
+		.section1{
+			position: relative;
+			.bg{
+				overflow: hidden;
+				height: 100%;
+				img{
+					width: 100%;
+				    margin-top: -60px;
+				}
+			}
+			.headding{
+				position: absolute;
+				background-color: transparent;
+				top: 0;
+				right: 3%;
+				width: 55%;
+			}
+			
+			@media(min-width: 1000px){
+				.bg{
+					max-height: 650px;
+				}
+				.headding{
+					width: 40%;
+				}
+			}
+			@media(max-width: 768px){
+				color: white;
+				.bg{
+					background-color: black;
+					position: relative;
+					img{
+						opacity: 0.3;
+					}
+				}
+				.headding{
+					width: 90%;
+					height: 70%;
+					top: 0;
+					bottom: 0;
+					.p2{
+						display: block;
+					}
+					.p3{
+						display: none;
+					}
+				}
+			}
+			.p3{
+				@include hide-above(945px);
+			}
+			.p2{
+				margin-top: 0;
+				@include hide-below(944px);
+				@media(min-width: 944px){
+					width: 75%;
+					margin-right: -150px;
+				}
+				@media(min-width: 1000px){
+					width: 100%;
+					margin-right: 0;
+
+				}
+			}
+			.p3{
+				padding: 20px 5%;
+			}
+		}
+	}
+}

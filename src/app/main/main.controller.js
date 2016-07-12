@@ -9,6 +9,45 @@
   function MainController($http, $httpParamSerializerJQLike) {
     var self = this;
 
+    self.brands = [
+      {
+        src: "assets/images/brands/brand01.png",
+        alt: "American Standard"
+      },
+      {
+        src: "assets/images/brands/brand02.png",
+        alt: "Amana"
+      },
+      {
+        src: "assets/images/brands/brand03.png",
+        alt: "Goodman"
+      },
+      {
+        src: "assets/images/brands/brand04.png",
+        alt: "Carrier"
+      },
+      {
+        src: "assets/images/brands/brand05.png",
+        alt: "Lennox"
+      },
+      {
+        src: "assets/images/brands/brand06.png",
+        alt: "Trane"
+      },
+      {
+        src: "assets/images/brands/brand07.png",
+        alt: "bryant"
+      },
+      {
+        src: "assets/images/brands/brand08.png",
+        alt: "YORK"
+      },
+      {
+        src: "assets/images/brands/brand09.png",
+        alt: "Westinghouse"
+      },
+    ]
+
     self.message = {};
     self.alertSuccess = function(){
       swal('Thanks!',
@@ -24,7 +63,7 @@
     self.sendMessage = function() {
       $http({
         method  : 'POST',
-        url     : '//formspree.io/ejklemen@gmail.com',
+        url     : '//formspree.io/office@zenitservice.com',
         data    : $httpParamSerializerJQLike(self.message), // pass in data as strings
         headers: {
           'Accept': 'application/json',
@@ -33,8 +72,6 @@
         Accept: 'application/json'
        })
       .success(function(data) {
-          console.log(data);
-
           if (!data.success) {
             // if not successful, bind errors to error variables
             self.alertError()
@@ -46,7 +83,6 @@
             self.message = data.message;
           }
         });
-      console.log('banana');
     }
 
     

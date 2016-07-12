@@ -1,51 +1,112 @@
 <!doctype html>
 <html ng-app="ekSites">
   <head>
-    <meta charset="utf-8">
-    <title>ekSites</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,200|Rochester' rel='stylesheet' type='text/css'>
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<meta charset="utf-8">
+	<title>Zenit HVAC</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<!-- <link href='https://fonts.googleapis.com/css?family=Raleway:400,200|Rochester' rel='stylesheet' type='text/css'> -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto|Raleway' rel='stylesheet' type='text/css'>
+	<script src="http://maps.google.com/maps/api/js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
-    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
-    <!-- endbower -->
-    <!-- endbuild -->
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css({.tmp/serve,src}) styles/app.css -->
-    <!-- inject:css -->
-    <!-- css files will be automatically insert here -->
-    <!-- endinject -->
-    <!-- endbuild -->
+	<!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+	<!-- bower:css -->
+	<!-- run `gulp inject` to automatically populate bower styles dependencies -->
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:css({.tmp/serve,src}) styles/app.css -->
+	<!-- inject:css -->
+	<!-- css files will be automatically insert here -->
+	<!-- endinject -->
+	<!-- endbuild -->
   </head>
-  <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+  <body layout-align="column" layout-align="center center" layout-fill>
+	<!--[if lt IE 10]>
+	  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
 
-    <header>
-      <acme-navbar></acme-navbar>
-    </header>
+	<header flex autoscroll>
+	  <acme-navbar></acme-navbar>
+	</header>
 
-    <div ng-view></div>
 
-    <!-- build:js(src) scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- run `gulp inject` to automatically populate bower script dependencies -->
-    <!-- endbower -->
-    <!-- endbuild -->
+	<div ng-view flex="initial"></div>
 
-    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
-    <!-- inject:js -->
-    <!-- js files will be automatically insert here -->
-    <!-- endinject -->
+	<footer flex>
+	  <md-toolbar>
+			<div class="md-toolbar-tools" layout-align="space-between end">
+				<div layout="row" class="left">
+					<div flex="none" class="top-logo">
+							<a href="#/">
+								<div layout="row" layout-align="center center">
+									<img class="logo" src="assets/images/Logo5.jpg" alt="">
+									<!-- <img class="zs-text" src="assets/images/ZS-text-clipped.png" alt=""> -->
+									<div class="zs-text">
+										<h5>Zenit Service</h5>
+										<h6>HVAC</h6>
+									</div>
 
-    <!-- inject:partials -->
-    <!-- angular templates will be automatically converted in js and inserted here -->
-    <!-- endinject -->
-    <!-- endbuild -->
+								</div>
+							</a>
+							<md-button class="numbers" href="tel:1-407-878-7840" layout-align="center center">407-878-7840</md-button>
+							<div class="nav-small" hide-gt-xs>
+								<md-button href="#/" aria-label="Home">
+									Home
+								</md-button>
+								<md-button href="#/about" aria-label="About">
+									About
+								</md-button>
+								<md-button href="#/contact" aria-label="Contact">
+									Contact
+								</md-button>
+							</div>
+					</div>
+
+				</div>
+				<div layout="column" class="right" hide-xs>
+					<md-button href="#/" aria-label="Home">
+						Home
+					</md-button>
+					<md-button href="#/about" aria-label="About us">
+						About Us
+					</md-button>
+					<md-button href="#/contact" aria-label="Contact">
+						Contact
+					</md-button>
+				</div>
+			</div>
+		</md-toolbar>
+	</footer>
+
+	<!-- build:js(src) scripts/vendor.js -->
+	<!-- bower:js -->
+	<!-- run `gulp inject` to automatically populate bower script dependencies -->
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+	<!-- inject:js -->
+	<!-- js files will be automatically insert here -->
+	<!-- endinject -->
+
+	<!-- inject:partials -->
+	<!-- angular templates will be automatically converted in js and inserted here -->
+	<!-- endinject -->
+	<!-- endbuild -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-77463207-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 
   </body>
 </html>

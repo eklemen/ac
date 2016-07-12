@@ -1,10 +1,26 @@
-@mixin cursive($size){
-	font-family: 'Rochester', cursive;
-	font-size: $size;
-}
-
 body{
 	font-family: 'Raleway', sans-serif;
+	p{
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+	span{
+		font-weight: bold;
+	}
+}
+
+.numbers{
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+}
+
+md-content{
+	margin: 0;
+	padding: 30px 0 0 0;
+}
+
+.content-padding{
+	padding: 25px 5%;
 }
 
 $primary: #78ba3b;
@@ -12,6 +28,10 @@ $primary: #78ba3b;
 .row{
 	margin-left: 0;
 	margin-right: 0;
+}
+
+.mar-bot{
+	margin-bottom: 70px !important;
 }
 
 @mixin hide-below($size: 680px){
@@ -24,3 +44,267 @@ $primary: #78ba3b;
 		display: none;
 	}
 }
+
+@mixin width-fix($width: 100%) {
+  max-width: $width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.margin-auto{
+	display: block;
+	margin: 0 auto;
+}
+
+md-content{
+	height: 100%;
+}
+
+.page-title{
+	width: 100%;
+	padding-left: 10%;
+}
+
+
+.section1{
+	margin-bottom: 70px;
+	width: 100%;
+}
+
+@mixin background-image($url, $attachment:scroll, $opac:0, $bgc:0){
+	background: linear-gradient(rgba($bgc, $bgc, $bgc, $opac), rgba($bgc, $bgc, $bgc, $opac)), url($url) no-repeat center center $attachment;
+	// -webkit-background-size: cover;
+	// -moz-background-size: cover;
+	// -o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+
+@mixin fade-image($margin:-60px){
+	margin: 40px auto;
+	.image-container{
+		padding: 0;
+		margin: 0 $margin;
+		img{
+			width: 100%;
+			margin-left: $margin;
+		}
+		@media(max-width: 768px){
+			margin: 0 -25px;
+			img{
+				margin-left: -25px;
+			}
+		}
+	}
+	.content-box{
+		z-index: 2;
+		padding-left: 10%;
+		margin-right: -40px;
+		@media(max-width: 600px){
+			margin: 0;
+			padding: 5%;
+		}
+	}
+}
+
+@mixin fade-image-reverse($margin:-60px){
+	margin: 40px auto;
+	.image-container{
+		padding: 0;
+		margin: 0 $margin;
+		img{
+			width: 100%;
+			margin-right: $margin;
+		}
+		@media(max-width: 768px){
+			margin: 0 -25px;
+			img{
+				margin-left: -25px;
+			}
+		}
+	}
+	.content-box{
+		z-index: 2;
+		padding-right: 10%;
+		margin-left: -40px;
+		@media(max-width: 600px){
+			margin: 0;
+			padding: 5%;
+		}
+	}
+}
+
+
+@mixin background-text($url, $attachment: scroll, $opac:0.7, $bgc:0){
+	.background{
+		// @include background-image($path, scroll, 0.75);
+		background: linear-gradient(rgba($bgc, $bgc, $bgc, $opac), rgba($bgc, $bgc, $bgc, $opac)), url($url) no-repeat center center $attachment;
+		background-size: cover;
+		position: relative;
+		display: flex;
+		align-items: center;
+		min-height: 450px;
+		.content{
+			p{
+				background-color: white;
+				padding: 20px;
+				border-radius: 5px;
+				line-height: 22px;
+			}
+		}
+		.headding{
+			margin: 0 auto;
+			max-width: 1000px;
+			padding: 20px 5%;
+			border-radius: 5px;
+			width: 90%;
+		    color: #fff;
+			h3{
+				margin: 0 auto 10px auto;
+				font-size: 1.5em;
+				@media(max-width: 480px) {
+			    	font-size: 34px;
+				    letter-spacing: 1px;
+			    }
+			}
+			p{
+				text-align: center;
+				margin: 10px auto;
+				@media(max-width: 480px) {
+			    	font-size: 16px;
+			    }
+				@media(min-width: 480px) {
+			    	br{
+			    		display: none
+			    	}
+			    }
+			}
+			h3, p {
+				width: 100%;
+			    text-align: center;
+			    // background-color: rgba(0,0,0,0.7);
+			}
+			.md-button{
+				min-height: 55px !important; 
+				font-size: 2em !important;
+				transition: border 0.1s linear;
+				padding-top: 5px;
+				&:hover{
+					border: solid 2px;
+					background-color: rgba(255, 255, 255, 0.15);
+				}
+				span{
+					padding: 3px;
+				}
+			}
+
+		}
+	}
+}
+
+footer{
+    width: 100% !important;
+    overflow-x: hidden;
+    height: 250px;
+    md-toolbar{
+	    min-height: 250px;
+	    overflow-y: hidden;
+	    // padding-top: 80px;
+        background-color: rgba(0,0,0,0.4) !important;
+	    color: #fff !important;
+        padding-left: 5%;
+	    padding-right: 5%;
+	    .md-toolbar-tools{
+	    	height: 100%;
+	    	.left{
+	    		margin: 0;
+	    		padding-top: 100px;
+	    		.top-logo{
+	    			width: 100%;
+	    			.nav-small{
+	    				padding-top: 25px;
+	    				.md-button{
+	    					width: 32% !important;
+	    					box-sizing: border-box;
+	    					margin: 0 !important;
+	    				}
+	    			}
+	    			.zs-text{
+	    				h5,h6{
+	    					margin: 0;
+	    					padding-left: 10px;
+	    				}
+	    				h5{
+	    					font-family: 'Futurica Bold';
+	    					color: #71706e;
+	    					font-size: 1.5em;
+	    				}
+	    				h6{
+	    					font-size: 1.4em;
+	    					font-family: 'Futurica Light';
+	    					color: #7fb902;
+	    					letter-spacing: 1.5px;
+	    					margin-top: -10px;
+	    				}
+	    				@media(max-width: 661px){
+							h5{
+								font-size: 1.3em;
+							}
+							h6{
+								font-size: 1.2em;
+							}
+	    				}
+	    			}
+	    		}
+	    		@media(max-width: 601px){
+					margin: 0 auto;
+					padding-top: 120px;
+					.numbers{
+						width: 100%;
+						a{
+							font-size: 0.8em !important;
+						}
+					}
+	    		}
+	    	}
+	    	.right{
+	    		padding-top: 140px;
+	    	}
+	    	div{
+	    		a{
+	    			border-radius: 0;
+	    			border-bottom-color: 0.1s ease-out;
+	    			box-sizing: border-box;
+	    			border-bottom: 3px solid transparent;
+	    			transition: border-bottom .2s ease;
+	    			&:hover{
+	    				background-color: transparent !important;
+	    				border-bottom: 3px solid rgba(124, 194, 66, 0.6);
+	    				box-sizing: border-box;
+	    			}
+	    			&.active{
+	    				border-bottom: 3px solid #7CC242;
+	    			}
+	    		}
+	    	}
+			.md-button.numbers{
+				min-height: 35px !important; 
+				font-size: 2em !important;
+				transition: all 0.1s linear;
+				padding-top: 5px;
+				border: solid 2px transparent;
+				margin: 0;
+				color: #7cc242;
+				&:hover{
+					// border: solid 2px;
+					color: #A4C787;
+					background-color: rgba(255, 255, 255, 0.15);
+				}
+				span{
+					padding: 3px;
+				}
+			}
+	    }
+    }
+}
+

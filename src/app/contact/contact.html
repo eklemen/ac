@@ -1,41 +1,79 @@
 <md-content class="contact">
-  <div layout="column">
-    <div>
-      <p flex-gt-md="40" flex-gt-sm="50" flex="100">Have a question or need to request a service? Enter your info below and we will promptly reply.</p>
-    </div>
-    <div layout="row" flex="100">
-      <div class="form-container" flex-gt-sm="50" flex>
-        <form ng-submit="con.sendMessage(message)" name="emailForm" >
-          <div>
-            <md-input-container class="md-block">
-              <label>Name</label>
-              <input name="name" ng-model="con.message.name">
-              <!-- <div ng-messages="message.name.$error">
-                <div ng-message="required">Please enter your name</div>
-              </div> -->
-            </md-input-container>
+	<div class="section1">
+		<div flex>
+			<h2>Contact Zenit Today!</h2>
+			<p>Have a question or need to request a service? Enter your info below and we will promptly reply.</p>
+		</div>
+	</div>
+	<div class="section2">
+		<div class="contact-direct">
+				<h3>How to reach us</h3>
+				<div class="info-box">
+					<span>Call today</span>
+					<div>
+						<md-icon class="material-icons md-mainColor icon">phone</md-icon>
+						<a class="numbers no-decoration" href="tel:1-407-878-7840">407-878-7840</a>
+					</div>
 
-            <md-input-container class="md-block">
-              <label>Email</label>
-              <input name="_replyto" ng-model="con.message.replyTo">
-            </md-input-container>
+				</div>
+				<div class="info-box">
+					<span>Email Address</span>
+					<div>
+						<md-icon class="material-icons md-mainColor icon">email</md-icon>
+						office@zenitservice.com
+					</div>
+				</div>
+				<div class="info-box">
+					<span>Find us on Facebook</span>
+					<div>
+						<i class="fa fa-facebook-square"></i>
+						<a target="_blank" href="https://www.facebook.com/" class="no-decoration">
+							<span>Zenit Service </span>
+						</a>
+					</div>
+				</div>
+		</div>
+		<div class="form-container">
+			<form ng-submit="con.sendMessage(message)" name="con.emailForm">
+				<div>
 
-            <md-input-container class="md-block">
-              <label>Message</label>
-              <textarea ng-model="con.message.body" name="message" columns="1" rows="3" placeholder="Enter your message here..."></textarea>
-            </md-input-container>
-            <input type="text" name="_gotcha" style="display:none" />
-            <input type="hidden" name="_next" value="#" />
-            <md-button flex="50" class="md-raised md-primary" type="submit" value="Send">Send</md-button>
-          </div>
-        </form>
-      </div><!-- .form-container -->
-      <!-- <button ng-click="con.alertError()"></button> -->
-      <div flex="50" hide-sm>
-        <div class="contact-image">
-          <img src="assets/images/ac-repair.png" md-padding alt="">
-        </div>
-      </div>
-    </div> 
-  </div>
+					<md-input-container class="md-icon-float md-block">
+						<label>Name*</label>
+						<md-icon class="material-icons md-mainColor icon">person</md-icon>
+						<input name="name" ng-model="con.message.name" required="true">
+						<div ng-messages="con.message.name.$error">
+							<div ng-message="required">Please enter your name.</div>
+						</div>
+					</md-input-container>
+
+					<md-input-container class="md-icon-float md-block">
+						<label>Email*</label>
+						<md-icon class="material-icons md-mainColor icon">email</md-icon>
+						<input name="_replyto" ng-model="con.message.replyTo" required="true" ng-pattern="/^.+@.+\..+$/">
+						<div ng-messages="con.message.name.$error">
+							<div ng-message="required">Please enter a valid email address.</div>
+						</div>
+					</md-input-container>
+
+					<md-input-container class="md-icon-float md-block text-area">
+						<label>Message*</label>
+						<md-icon class="material-icons md-mainColor icon">edit</md-icon>
+						<textarea ng-model="con.message.body" name="message" columns="1" rows="3" placeholder="Enter your message here..." required="true"></textarea>
+					</md-input-container>
+					<input type="text" name="_gotcha" style="display:none" />
+					<input type="hidden" name="_next" value="#" />
+					<md-button flex="50" class="md-raised md-primary" type="submit" ng-disabled="con.emailForm.$invalid" value="Send">Send</md-button>
+				</div>
+			</form>
+		</div>	
+	</div>
+	<div class="section3 mar-bot">
+		<div class="map-container">
+		<md-button hide-gt-sm class="md-raised open-map" ng-click="con.myNavFunc()">Get Directions</md-button>
+		<md-button show-gt-md hide-xs hide-sm class="md-raised open-map" ng-click="con.myNavFunc()">Get directions</md-button>
+		<map class="map" center="28.7336605,-81.3018416">
+			<marker position="[28.7336605,-81.3018416]" />
+		</map>
+	</div>
+	</div>
 </md-content>

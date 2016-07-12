@@ -1,0 +1,194 @@
+.iaq{
+	&.general{
+		padding: 0;
+		.page-title{
+			h2{
+				padding: 0 5%;
+			}
+		}
+		.section1{
+			@include width-fix();
+			margin-bottom: 0;
+			@include background-image('../assets/images/site-photos/indoorAirQuality.jpg', scroll, 0.25);
+			background-position-y: 70%;
+
+			.background{
+				background-position: bottom !important;
+				min-height: 350px;
+				display: flex;
+				align-items: center;
+				.content{
+					p{
+						background-color: white;
+						padding: 20px;
+						border-radius: 5px;
+						line-height: 22px;
+					}
+				}
+				.headding{
+					margin: 0 auto;
+					max-width: 1000px;
+					padding: 20px 5%;
+					border-radius: 5px;
+					width: 90%;
+				    color: #fff;
+					h3{
+						margin: 0 auto 10px auto;
+						font-size: 1.5em;
+						@media(max-width: 480px) {
+					    	font-size: 34px;
+						    letter-spacing: 1px;
+					    }
+					}
+					p{
+						text-align: center;
+						margin: 10px auto;
+						@media(max-width: 480px) {
+					    	font-size: 14px;
+					    }
+						@media(min-width: 480px) {
+					    	br{
+					    		display: none
+					    	}
+					    }
+					}
+					h3, p {
+						width: 100%;
+					    text-align: center;
+					}
+					.md-button{
+						min-height: 55px !important; 
+						font-size: 2em !important;
+						transition: border 0.1s linear;
+						padding-top: 5px;
+						&:hover{
+							border: solid 2px;
+							background-color: rgba(255, 255, 255, 0.15);
+						}
+						span{
+							padding: 3px;
+						}
+					}
+
+				}
+			}
+		}
+		.section2{
+			min-height: 350px;
+			width: 100%;
+			background-color: #E6E6E6;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.content-padding{
+				padding: 25px 8%;
+				max-width: 1100px;
+				.img-container{
+					max-width: 800px;
+
+				}
+			}
+		}
+	}
+
+	&.insulation{
+		.section1{
+			@include width-fix();
+			@include background-text('../assets/images/site-photos/for-background/attic-insulation.jpg', scroll, 0.6);
+			.headding{
+				h4{
+					font-size: 1.3em;
+					text-align: center;
+				}
+			}
+		}
+		.numbers{
+			font-size: 1.25em;
+		}
+		.section2{
+			h3{
+				padding: 10px 5%;
+			}
+		}
+	}
+
+
+	&.cleaning{
+	    padding: 40px 5% 0 5%;
+		.tab-container{
+			margin-bottom: 60px;
+			.tabs{
+				.product-description{
+					width: 50%;
+					float: left;
+					h4{
+						margin: 0;
+					}
+					.img-mobile{
+						@include hide-above(660px);
+						display: block;
+						margin: 0 auto;
+						img{
+							width: 100%;
+						}
+					}
+				}
+				.product-img{
+					@include hide-below(660px);
+					width: 45%;
+					float: right;
+					img{
+						width: 100%;
+					}
+				}
+				@media(max-width: 660px){
+					.product-img, .product-description{
+						width: 100%;
+					}
+				}
+			}
+		}
+		.less{
+			display: none;
+			width: 50px;
+			color: #7CC242;
+		}
+		.read-more{
+			width: 100px;
+			color: #7CC242;
+		}
+		.is-expanded{
+			.read-more{
+				display: none;
+			}
+			.less{
+				display: block;
+			}
+		}
+		v-pane-header{
+			border: none;
+			margin: 0;
+			padding: 0;
+			&:before{
+				background-color: #498617 !important;
+			}
+		}
+		.accordion-items{
+			padding: 10px 15px;
+			margin-bottom: 10px;
+			.accordion-item{
+				margin-bottom: 25px;
+				h4, p{
+					margin: 5px 0;
+				}
+				v-pane-content{
+					padding: 0;
+					div{
+						padding: 0 0 10px 0;
+					}
+				}
+			}
+		}
+	}
+	
+}

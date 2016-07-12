@@ -1,10 +1,90 @@
 .contact{
 	padding: 0 5%;
+    max-width: 1100px;
+    margin: 0 auto;
 	.contact-image{
 		overflow: hidden;
 		padding: 10px 10px 10px 25px;
 		img{
 			width: 100%;
+		}
+	}
+	div{
+		p{
+			padding: 0 12px;
+		}
+	}
+	.section2{
+		margin-bottom: 40px;
+		min-height: 300px;
+		@media(max-width: 660px){
+			min-height: 450px;
+			margin-bottom: 0;
+		}
+		.contact-direct{
+			width: 30%;
+			float: left;
+			max-width: 400px;
+			@media(max-width: 850px){
+				width: 100%;
+			}
+			.info-box{
+				margin: 10px 0;
+			}
+			.no-decoration{
+				text-decoration: none;
+			}
+			.fa{
+				font-size: 24px;
+				color: rgba(0,0,0,0.54);
+			}
+		}
+		.form-container{
+			width: 65%;
+			float: right;
+
+			@media(max-width: 850px){
+				width: 100%;
+			}
+			form{
+				max-width: 750px;
+				.md-block{
+					.material-icons{
+						display: inline-block;
+					}
+				}
+				button{
+					margin-left: 0;
+					@media(max-width: 600px){
+						margin-left: 5%;
+					}
+				}
+				.text-area{
+					padding-left: 37px;
+					label{
+						margin-left: 36px;
+					}
+				}
+			}
+		}
+	}
+	.section3{
+	    margin: 0 auto;
+	    max-width: 700px;
+		.map-container{
+			margin-top: 75px;
+			margin-bottom: 50px;
+			@media(max-width: 660px){
+				margin-top: 110px;
+			}
+			.map{
+				width: 90%;
+				margin: 0 auto;
+			}
+			.open-map{
+				margin-left: 5%;
+				margin-bottom: 12px;
+			}
 		}
 	}
 }

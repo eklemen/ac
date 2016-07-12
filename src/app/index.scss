@@ -7,8 +7,13 @@
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 @import './styles/shared.scss';
-@import './styles/main.scss';
-@import './styles/contact.scss';
+// @import './styles/main.scss';
+// @import './styles/contact.scss';
+// @import './styles/about.scss';
+// @import './styles/residential.scss';
+// @import './styles/commercial.scss';
+// @import './styles/mini-splits.scss';
+// @import './styles/iaq.scss';
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -19,6 +24,22 @@
        url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
        url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff) format('woff'),
        url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Futurica Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/fonts/FUTU_EXB.TTF); /* For IE6-8 */
+  src: local('Futurica Bold'),
+       url(../assets/fonts/FUTU_EXB.TTF) format('truetype');
+}
+@font-face {
+  font-family: 'Futurica Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/fonts/FUTU_LT.TTF); /* For IE6-8 */
+  src: local('Futurica Light'),
+       url(../assets/fonts/FUTU_LT.TTF) format('truetype');
 }
 
 .material-icons {
@@ -54,9 +75,16 @@ html {
   visibility: hidden;
 }
 
+
 [layout=row] {
   flex-direction: row;
 }
+
+footer{
+  height: 130px;
+  background-color: gray;
+}
+
 
 
 

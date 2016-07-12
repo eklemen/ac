@@ -12,11 +12,13 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
+      // Contact
       .when('/contact', {
         templateUrl: 'app/contact/contact.html',
         controller: 'ContactController',
         controllerAs: 'con'
       })
+      // About
       .when('/about', {
         templateUrl: 'app/about/about.html',
         controller: 'AboutController',
@@ -43,6 +45,60 @@
         controller: 'ResidentialController',
         controllerAs: 'res'
       })
+
+      // Commercial
+      .when('/commercial/service/', {
+        templateUrl: 'app/commercial/partials/service.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+      .when('/commercial/contracts/', {
+        templateUrl: 'app/commercial/partials/contracts.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+      .when('/commercial/installation', {
+        templateUrl: 'app/commercial/partials/installation.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+
+      // Mini Splits
+      .when('/miniSplit/general', {
+        templateUrl: 'app/miniSplit/partials/general.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+      .when('/miniSplit/products', {
+        templateUrl: 'app/miniSplit/partials/products.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+
+      // IAQ
+      .when('/iaq/general', {
+        templateUrl: 'app/iaq/partials/general.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+      .when('/iaq/cleaning/', {
+        templateUrl: 'app/iaq/partials/cleaning.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+      .when('/iaq/insulation', {
+        templateUrl: 'app/iaq/partials/insulation.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+
+      // Refrigeration 
+      .when('/refrigeration/', {
+        templateUrl: 'app/refrigeration/partials/refrigeration.html',
+        controller: 'ResidentialController',
+        controllerAs: 'res'
+      })
+
       .otherwise({
         redirectTo: '/'
       });

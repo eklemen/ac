@@ -6,7 +6,8 @@
     .config(config);
 
   /** @ngInject */
-  function config($mdThemingProvider) {
+  function config($mdThemingProvider, $compileProvider) {
+    $compileProvider.debugInfoEnabled(false);
     var mainColorMap = $mdThemingProvider.extendPalette('green', {
       '400': '78ba3b',
       '500': '78ba3b',

@@ -6,7 +6,7 @@
     .controller('ResidentialController', ResidentialController);
 
   /** @ngInject */
-  function ResidentialController($scope) {
+  function ResidentialController() {
     var self = this;
 	self.contracts = [
 		'assets/images/site-photos/Commercial_Maintenance_1.jpeg',

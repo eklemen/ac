@@ -10,9 +10,6 @@
     var self = this;
 
     NgMap.getMap().then(function(map) {
-      console.log(map.getCenter());
-      console.log('markers', map.markers);
-      console.log('shapes', map.shapes);
     });
 
     self.myNavFunc = function (){
@@ -49,7 +46,6 @@
         Accept: 'application/json'
        })
       .success(function(data) {
-          console.log(data);
 
           if (!data.success) {
             // if not successful, bind errors to error variables
@@ -62,7 +58,6 @@
             self.message = data.message;
           }
         });
-      console.log('banana');
     }
 
     

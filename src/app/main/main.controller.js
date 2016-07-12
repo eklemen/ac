@@ -12,39 +12,39 @@
     self.brands = [
       {
         src: "assets/images/brands/brand01.png",
-        alt: ""
+        alt: "American Standard"
       },
       {
         src: "assets/images/brands/brand02.png",
-        alt: ""
+        alt: "Amana"
       },
       {
         src: "assets/images/brands/brand03.png",
-        alt: ""
+        alt: "Goodman"
       },
       {
         src: "assets/images/brands/brand04.png",
-        alt: ""
+        alt: "Carrier"
       },
       {
         src: "assets/images/brands/brand05.png",
-        alt: ""
+        alt: "Lennox"
       },
       {
         src: "assets/images/brands/brand06.png",
-        alt: ""
+        alt: "Trane"
       },
       {
         src: "assets/images/brands/brand07.png",
-        alt: ""
+        alt: "bryant"
       },
       {
         src: "assets/images/brands/brand08.png",
-        alt: ""
+        alt: "YORK"
       },
       {
         src: "assets/images/brands/brand09.png",
-        alt: ""
+        alt: "Westinghouse"
       },
     ]
 
@@ -72,8 +72,6 @@
         Accept: 'application/json'
        })
       .success(function(data) {
-          console.log(data);
-
           if (!data.success) {
             // if not successful, bind errors to error variables
             self.alertError()
